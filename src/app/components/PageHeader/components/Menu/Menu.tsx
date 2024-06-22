@@ -10,7 +10,7 @@ import {
   SheetTrigger,
 } from '@/components/shadcn';
 import { ContactMeLink, MenuLinks } from './components';
-import { Logo } from '@/components/ui';
+import { Logo, SocialMediaLinks } from '@/components/ui';
 
 function Menu() {
   return (
@@ -20,7 +20,7 @@ function Menu() {
           <MenuIcon data-testid='menu-icon' strokeWidth={1.25} />
         </Button>
       </SheetTrigger>
-      <SheetContent className='w-full' side='left'>
+      <SheetContent className='flex w-full flex-col' side='left'>
         <SheetHeader className='mb-14'>
           <SheetTitle>
             <SheetClose asChild>
@@ -29,11 +29,12 @@ function Menu() {
           </SheetTitle>
         </SheetHeader>
         <MenuLinks />
-        <div className='mt-14 inline-block'>
+        <div className='mb-auto mt-14 inline-block'>
           <SheetClose asChild>
             <ContactMeLink />
           </SheetClose>
         </div>
+        <SocialMediaLinks />
       </SheetContent>
     </Sheet>
   );

@@ -10,6 +10,7 @@ vi.mock('@/components/ui', () => ({
       Mock logo
     </a>
   ),
+  SocialMediaLinks: () => <div>Mock sm links</div>,
 }));
 
 vi.mock('./components', () => ({
@@ -31,4 +32,15 @@ test('displays sheet when user clicks on trigger button', async () => {
 
   await user.click(triggerBtn);
   expect(screen.getByRole('dialog')).toBeInTheDocument();
+});
+
+test('hides sheet when user clicks on escape while sheet is open', async () => {
+  const user = userEvent.setup();
+  render(<Menu />);
+  const triggerBtn = screen.getByRole('button');
+
+  await user.click(triggerBtn);
+  await user.keyboard('{Escape}');
+
+  expect(screen.queryByRole('dialog')).not.toBeInTheDocument();
 });
