@@ -1,3 +1,4 @@
+import Menu from './Menu/Menu';
 import ModeToggle from './ModeToggle/ModeToggle';
 
-export { ModeToggle };
+export { Menu, ModeToggle };

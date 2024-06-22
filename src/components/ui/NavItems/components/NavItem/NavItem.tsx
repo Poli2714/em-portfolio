@@ -2,30 +2,27 @@
 
 import { usePathname } from 'next/navigation';
 
-import { convertToPath } from '@/lib/convertToPath/convertToPath';
 import Link from 'next/link';
 
 type NavItemProps = {
+  href: string;
   label: string;
 };
 
-function NavItem({ label }: NavItemProps) {
-  const href = convertToPath(label);
+function NavItem({ href, label }: NavItemProps) {
   const path = usePathname();
 
   return (
-    <div className='group relative'>
-      <Link
-        className={`${path !== href ? 'text-foreground/50 transition-opacity group-hover:text-foreground' : null} font-medium`}
-        href={href}
-      >
-        {label}
-      </Link>
+    <Link
+      className={`group relative font-medium ${path !== href ? 'text-foreground/50 transition-opacity group-hover:text-foreground' : null}`}
+      href={href}
+    >
+      {label}
       <div
-        className={`absolute -bottom-1 h-1 w-full bg-primary ${path !== href ? 'origin-left scale-x-0 transition-transform group-hover:scale-x-100' : null}`}
+        className='absolute -bottom-1.5 h-1 w-full origin-left scale-x-0 bg-primary transition-transform duration-200 group-hover:scale-x-100'
         data-testid='underline'
       ></div>
-    </div>
+    </Link>
   );
 }
 

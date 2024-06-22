@@ -1,14 +1,14 @@
 import { NavItem } from './components';
 
-const navItems = ['Home', 'My Story', 'Projects'];
+import { navItems } from '@/lib/nav-items';
 
 function NavItems() {
   return (
     <nav>
       <ul className='flex gap-x-4'>
-        {navItems.map((navItem, i) => (
-          <li key={i}>
-            <NavItem label={navItem} />
+        {navItems.map((navItem) => (
+          <li key={navItem.id}>
+            <NavItem href={navItem.href} label={navItem.label} />
           </li>
         ))}
       </ul>
