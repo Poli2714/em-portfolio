@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 
-import { PageHeader } from './components';
+import { PageFooter, PageHeader } from './components';
 import { ThemeProvider } from '@/components/shadcn';
 
 import '@/styles/globals.css';
@@ -27,8 +27,11 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <PageHeader />
-          {children}
+          <div className='px-[clamp(1rem,3dvw,3rem)] 2xl:container'>
+            <PageHeader />
+            {children}
+            <PageFooter />
+          </div>
         </ThemeProvider>
       </body>
     </html>

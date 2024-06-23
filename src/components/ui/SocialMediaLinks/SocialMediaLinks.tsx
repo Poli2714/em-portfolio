@@ -3,11 +3,16 @@ import Link from 'next/link';
 import { Button } from '@/components/shadcn';
 import { SocialMediaIcon } from './components';
 
+import { cn } from '@/lib/utils';
 import { smAccounts } from '@/lib/sm-accounts';
 
-function SocialMediaLinks() {
+type SocialMediaLinksProps = {
+  className?: string;
+};
+
+function SocialMediaLinks({ className }: SocialMediaLinksProps) {
   return (
-    <ul className='flex self-end'>
+    <ul className={cn('flex', className)}>
       {smAccounts.map((account) => (
         <li key={account.name}>
           <Button asChild className='rounded-full' size='icon' variant='ghost'>

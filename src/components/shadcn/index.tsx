@@ -5,6 +5,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from './dropdown-menu';
+import { Separator } from './separator';
 import {
   Sheet,
   SheetClose,
@@ -21,6 +22,7 @@ export {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
+  Separator,
   Sheet,
   SheetClose,
   SheetContent,

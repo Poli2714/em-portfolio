@@ -34,7 +34,7 @@ function Menu() {
             <ContactMeLink />
           </SheetClose>
         </div>
-        <SocialMediaLinks />
+        <SocialMediaLinks className='self-end' />
       </SheetContent>
     </Sheet>
   );
