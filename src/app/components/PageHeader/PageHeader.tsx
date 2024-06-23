@@ -6,7 +6,7 @@ import { Menu, ModeToggle } from './components';
 
 function PageHeader() {
   return (
-    <header className='flex h-24 items-center px-12 2xl:container sm:justify-between'>
+    <header className='flex h-24 items-center px-[clamp(1rem,3dvw,3rem)] 2xl:container sm:justify-between'>
       <div className='flex items-center gap-x-2'>
         <Menu />
         <Logo />
