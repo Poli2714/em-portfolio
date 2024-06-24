@@ -1,3 +1,4 @@
+import { Badge } from './badge';
 import { Button } from './button';
 import {
   DropdownMenu,
@@ -17,6 +18,7 @@ import {
 import { ThemeProvider } from './theme-provider';
 
 export {
+  Badge,
   Button,
   DropdownMenu,
   DropdownMenuContent,
