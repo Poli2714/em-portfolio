@@ -29,7 +29,6 @@ function HeroContent() {
         <Button asChild size='lg'>
           <Link href='/contact-me'>Contact me</Link>
         </Button>
-
         <Button asChild size='lg' variant='outline'>
           <Link href='/projects'>Projects</Link>
         </Button>
