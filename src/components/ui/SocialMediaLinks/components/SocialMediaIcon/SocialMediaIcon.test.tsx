@@ -13,7 +13,6 @@ test('renders SocialMediaIcon', () => {
       srcLight={GithubLight}
     />
   );
-  screen.debug();
   const logos = screen.getAllByRole('img');
 
   expect(logos).toHaveLength(2);

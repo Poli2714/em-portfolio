@@ -8,7 +8,7 @@ type VisitProjectProps = {
 function VisitProject({ route }: VisitProjectProps) {
   return (
     <Link
-      className='group mt-4 flex items-center gap-x-1 self-start font-medium underline underline-offset-8'
+      className='group mt-4 flex items-center gap-x-1 place-self-start font-medium underline underline-offset-8'
       href={`/projects/${route}`}
     >
       Visit Project

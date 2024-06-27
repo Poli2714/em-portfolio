@@ -1,6 +1,5 @@
 import { Button } from '@/components/shadcn';
-import { ProjectCard } from './components';
-import { SectionTitle } from '@/components/ui';
+import { ProjectCard, SectionTitle } from '@/components/ui';
 
 import { projects } from '@/lib/projects';
 import Link from 'next/link';
