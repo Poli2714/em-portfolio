@@ -1,4 +1,4 @@
-import { MySkills, MyStory, PageHero } from './components';
+import { MyProjects, MySkills, MyStory, PageHero } from './components';
 
 export default function Home() {
   return (
@@ -6,6 +6,7 @@ export default function Home() {
       <PageHero />
       <MyStory />
       <MySkills />
+      <MyProjects />
     </>
   );
 }

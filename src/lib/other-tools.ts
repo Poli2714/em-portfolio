@@ -6,6 +6,7 @@ import GitHubDark from '/public/github-mark.svg';
 import GitHubLight from '/public/github-mark-white.svg';
 import GitLight from '/public/git-light.svg';
 import GitLogo from '/public/git.svg';
+import ReactHookFormLogo from '/public/react-hook-form.svg';
 import RtlLogo from '/public/rtl.svg';
 import ShadcnLight from '/public/shadcn-light.svg';
 import ShadcnLogo from '/public/shadcn.svg';
@@ -49,6 +50,12 @@ export const otherTools = [
     name: 'shadcn',
     logoDark: ShadcnLogo,
     logoLight: ShadcnLight,
+  },
+  {
+    id: 'react-hook-form',
+    name: 'React Hook Form',
+    logoDark: ReactHookFormLogo,
+    logoLight: undefined,
   },
   {
     id: 'rtl',

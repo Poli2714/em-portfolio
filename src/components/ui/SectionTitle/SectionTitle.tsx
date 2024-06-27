@@ -1,10 +1,13 @@
+import { cn } from '@/lib/utils';
+
 type SectionTitleProps = {
+  className?: string;
   title: string;
 };
 
-function SectionTitle({ title }: SectionTitleProps) {
+function SectionTitle({ className, title }: SectionTitleProps) {
   return (
-    <div className='relative inline-block'>
+    <div className={cn('relative inline-block', className)}>
       <h2 className='text-[clamp(1.5rem,6dvw,3rem)] font-bold leading-none'>
         {title}
       </h2>

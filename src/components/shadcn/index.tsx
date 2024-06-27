@@ -1,3 +1,4 @@
+import { AspectRatio } from './aspect-ratio';
 import { Badge } from './badge';
 import { Button } from './button';
 import {
@@ -18,6 +19,7 @@ import {
 import { ThemeProvider } from './theme-provider';
 
 export {
+  AspectRatio,
   Badge,
   Button,
   DropdownMenu,
