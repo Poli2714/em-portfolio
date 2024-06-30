@@ -4,9 +4,9 @@ import { render, screen } from '@testing-library/react';
 import ProjectCard from './ProjectCard';
 import { projects } from '@/lib/projects';
 
-vi.mock('./components', () => ({
-  ProjectCardImage: () => <div>Mock project image</div>,
-  ProjectStackList: () => <div>Mock project skills</div>,
+vi.mock('..', () => ({
+  ProjectImage: () => <div>Mock project image</div>,
+  ProjectTechStack: () => <div>Mock project skills</div>,
   VisitProject: () => <div>Mock visit project</div>,
 }));
 

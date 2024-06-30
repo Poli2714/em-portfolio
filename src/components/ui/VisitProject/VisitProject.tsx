@@ -1,17 +1,26 @@
 import { ArrowUpRightIcon } from 'lucide-react';
 import Link from 'next/link';
 
+import { cn } from '@/lib/utils';
+
 type VisitProjectProps = {
+  className?: string;
+  label: string;
   route: string;
 };
 
-function VisitProject({ route }: VisitProjectProps) {
+function VisitProject({ className, label, route }: VisitProjectProps) {
+  const href = route.startsWith('https') ? route : `/projects/${route}`;
+
   return (
     <Link
-      className='group mt-4 flex items-center gap-x-1 place-self-start font-medium underline underline-offset-8'
-      href={`/projects/${route}`}
+      className={cn(
+        'group flex items-center gap-x-1 font-medium underline underline-offset-8',
+        className
+      )}
+      href={href}
     >
-      Visit Project
+      {label}
       <ArrowUpRightIcon
         className='group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:transition-transform'
         data-testid='arrow-up-right'

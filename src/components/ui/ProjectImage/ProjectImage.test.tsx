@@ -1,14 +1,14 @@
 import { expect, test } from 'vitest';
 import { render, screen } from '@testing-library/react';
 
-import ProjectCardImage from './ProjectCardImage';
+import ProjectImage from './ProjectImage';
 
 test('renders ProjectCardImage with one image if project screenshot with light background is not provided', () => {
   render(
-    <ProjectCardImage
+    <ProjectImage
+      altDescription='ImageBox website screenshot'
       imgDark='/dark.png'
       imgLight={undefined}
-      projectName='ImageBox'
     />
   );
 
@@ -17,10 +17,10 @@ test('renders ProjectCardImage with one image if project screenshot with light b
 
 test('renders ProjectCardImage with two images if project screenshot with light background is provided', () => {
   render(
-    <ProjectCardImage
+    <ProjectImage
+      altDescription='Audiophile website screenshot'
       imgDark='/dark.png'
       imgLight='/light.png'
-      projectName='audiphile'
     />
   );
 

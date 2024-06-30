@@ -1,50 +1,44 @@
 import Image from 'next/image';
 
-import { AspectRatio } from '@/components/shadcn';
-
-type ProjectCardImageProps = {
+type ProjectImageProps = {
+  altDescription: string;
   imgDark: string;
   imgLight?: string;
-  projectName: string;
 };
 
-function ProjectCardImage({
+function ProjectImage({
+  altDescription,
   imgDark,
   imgLight,
-  projectName,
-}: ProjectCardImageProps) {
+}: ProjectImageProps) {
   const image = !imgLight ? (
     <Image
-      alt={`${projectName} project website screenshot`}
+      alt={altDescription}
       className='h-full w-full rounded-md object-cover object-top'
-      height={416}
-      width={721}
+      height={549}
+      width={976}
       src={imgDark}
     />
   ) : (
     <>
       <Image
-        alt={`${projectName} project website screenshot`}
+        alt={altDescription}
         className='h-full w-full rotate-0 scale-100 rounded-md object-cover object-top transition-all dark:-rotate-90 dark:scale-0'
-        height={416}
-        width={721}
+        height={549}
+        width={976}
         src={imgDark}
       />
       <Image
-        alt={`${projectName} project website screenshot`}
+        alt={altDescription}
         className='absolute left-0 top-0 h-full w-full rotate-90 scale-0 rounded-md object-cover object-top transition-all dark:rotate-0 dark:scale-100'
-        height={416}
-        width={721}
+        height={549}
+        width={976}
         src={imgLight}
       />
     </>
   );
 
-  return (
-    <AspectRatio className='rounded-md shadow-lg' ratio={16 / 9}>
-      {image}
-    </AspectRatio>
-  );
+  return image;
 }
 
-export default ProjectCardImage;
+export default ProjectImage;

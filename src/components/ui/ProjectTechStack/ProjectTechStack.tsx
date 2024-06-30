@@ -1,12 +1,15 @@
 import { Badge } from '@/components/shadcn';
 
-type ProjectStackListProps = {
+import { cn } from '@/lib/utils';
+
+type ProjectTechStackProps = {
+  className?: string;
   stack: Array<string>;
 };
 
-function ProjectStackList({ stack }: ProjectStackListProps) {
+function ProjectTechStack({ className, stack }: ProjectTechStackProps) {
   return (
-    <ul className='flex flex-wrap gap-1'>
+    <ul className={cn('flex flex-wrap gap-1', className)}>
       {stack.map((tool) => (
         <li key={tool}>
           <Badge className='bg-primary font-medium text-primary-foreground hover:bg-primary/70'>
@@ -18,4 +21,4 @@ function ProjectStackList({ stack }: ProjectStackListProps) {
   );
 }
 
-export default ProjectStackList;
+export default ProjectTechStack;
