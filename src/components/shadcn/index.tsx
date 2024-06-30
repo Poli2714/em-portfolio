@@ -1,3 +1,9 @@
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from './accordion';
 import { AspectRatio } from './aspect-ratio';
 import { Badge } from './badge';
 import { Button } from './button';
@@ -19,6 +25,10 @@ import {
 import { ThemeProvider } from './theme-provider';
 
 export {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
   AspectRatio,
   Badge,
   Button,
