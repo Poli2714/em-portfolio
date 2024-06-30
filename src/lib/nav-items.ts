@@ -14,4 +14,9 @@ export const navItems = [
     label: 'Projects',
     href: '/projects',
   },
+  {
+    id: 'blog',
+    label: 'Blog',
+    href: '/blog',
+  },
 ];
