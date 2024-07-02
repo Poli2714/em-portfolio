@@ -9,10 +9,14 @@ test('renders ProjectPageSection', () => {
       <p>Test paragraph</p>
     </ProjectPageSection>
   );
+  const paragraph = screen.getByRole('paragraph');
 
   expect(screen.getByTestId('project-page-section')).toBeInTheDocument();
+
   expect(
     screen.getByRole('heading', { level: 2, name: 'Test title' })
   ).toBeInTheDocument();
-  expect(screen.getByRole('paragraph')).toBeInTheDocument();
+
+  expect(paragraph).toBeInTheDocument();
+  expect(paragraph).toHaveTextContent(/^test paragraph$/i);
 });

@@ -1,6 +1,6 @@
-import { Project } from '@/types/project';
+import { TProject } from '@/types/project';
 
-export const projects: Array<Project> = [
+export const projects: Array<TProject> = [
   {
     date: 'June 2024',
     features: [
@@ -65,11 +65,11 @@ export const projects: Array<Project> = [
       'This project illustrates my proficiency in modern web technologies, including HTML, CSS, JavaScript, TypeScript, React, Next.js and underscores my commitment to building high-quality, user-centric web applications.',
     ],
     id: 'image-box',
-    image: [
+    images: [
       {
         alt_description: 'ImageBox main page screenshoot',
-        img_dark: '/imageBox/imageBox-dark-1.png',
-        img_light: '/imageBox/imageBox-light-1.png',
+        light_mode: '/imageBox/imageBox-dark-1.png',
+        dark_mode: '/imageBox/imageBox-light-1.png',
       },
     ],
     name: 'ImageBox',
@@ -99,10 +99,10 @@ export const projects: Array<Project> = [
       },
     ],
     id: 'audiophile',
-    image: [
+    images: [
       {
         alt_description: 'Audiophile main page screenshoot',
-        img_dark: '/imageBox/audiophile-1.png',
+        light_mode: '/imageBox/audiophile-1.png',
       },
     ],
     name: 'Audiophile',

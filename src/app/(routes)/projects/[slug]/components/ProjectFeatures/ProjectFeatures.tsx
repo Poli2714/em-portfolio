@@ -1,12 +1,12 @@
 import { AspectRatio } from '@/components/shadcn';
 import { FeatureList } from './components';
-import { ProjectImage } from '@/components/ui';
+import { Photo } from '@/components/ui';
 import { ProjectPageSection } from '..';
 
-import { Project } from '@/types/project';
+import { TProject } from '@/types/project';
 
 type ProjectFeaturesProps = {
-  project: Project;
+  project: TProject;
 };
 
 function ProjectFeatures({ project }: ProjectFeaturesProps) {
@@ -19,10 +19,10 @@ function ProjectFeatures({ project }: ProjectFeaturesProps) {
         <FeatureList features={project.features} />
       </ProjectPageSection>
       <AspectRatio className='rounded-md shadow-lg' ratio={16 / 9}>
-        <ProjectImage
-          altDescription={project.image[0].alt_description}
-          imgDark={project.image[0].img_dark}
-          imgLight={project.image[0].img_light}
+        <Photo
+          altDescription={project.images[0].alt_description}
+          lightMode={project.images[0].light_mode}
+          darkMode={project.images[0].dark_mode}
         />
       </AspectRatio>
     </div>

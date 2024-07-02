@@ -2,10 +2,10 @@ import { expect, test, vi } from 'vitest';
 import { render, screen } from '@testing-library/react';
 
 import ProjectFeatures from './ProjectFeatures';
-import { projects } from '@/lib/projects';
+import { __projects__ } from '@/__mocks__/__projects__';
 
 vi.mock('@/components/ui', () => ({
-  ProjectImage: () => <div>Mock project Image</div>,
+  Photo: () => <div>Mock project Image</div>,
 }));
 
 vi.mock('..', () => ({
@@ -13,7 +13,7 @@ vi.mock('..', () => ({
 }));
 
 test('renders PreojectFeatures', () => {
-  render(<ProjectFeatures project={projects[0]} />);
+  render(<ProjectFeatures project={__projects__[0]} />);
 
   expect(screen.getByTestId('project-features')).toBeInTheDocument();
 });

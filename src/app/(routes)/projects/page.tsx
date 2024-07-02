@@ -1,16 +1,18 @@
-import { PageHeader } from '@/components/ui';
+import { ChildPageHeader } from '@/components/ui';
 import { ProjectCardList } from './components';
+
+import { projects } from '@/lib/projects';
 
 export default function ProjectsHomePage() {
   return (
     <>
-      <PageHeader
+      <ChildPageHeader
         className='text-center'
         description='Some description'
         mainTitle='Portfolio'
         secondaryTitle='Projects'
       />
-      <ProjectCardList />
+      <ProjectCardList projects={projects} />
     </>
   );
 }

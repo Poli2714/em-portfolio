@@ -1,9 +1,9 @@
 import { SquareCheckBigIcon } from 'lucide-react';
 
-import { ProjectFeature } from '@/types/project';
+import { TProjectFeature } from '@/types/project';
 
 type FeatureListProps = {
-  features: Array<ProjectFeature>;
+  features: Array<TProjectFeature>;
 };
 
 function FeatureList({ features }: FeatureListProps) {

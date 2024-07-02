@@ -1,10 +1,14 @@
-import { Button } from '@/components/shadcn';
-import { ProjectCard, SectionTitle } from '@/components/ui';
-
-import { projects } from '@/lib/projects';
 import Link from 'next/link';
 
-function MyProjects() {
+import { Button } from '@/components/shadcn';
+import { ProjectCard, SectionTitle } from '@/components/ui';
+import { TProject } from '@/types/project';
+
+type MyProjectsProps = {
+  projects: Array<TProject>;
+};
+
+function MyProjects({ projects }: MyProjectsProps) {
   return (
     <section
       className='my-[clamp(5rem,15dvw,10rem)] flex flex-col gap-y-10 lg:mt-0'

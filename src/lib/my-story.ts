@@ -1,0 +1,2 @@
+export const my_story_short =
+  "Hi, I'm Elgun Mehdiyev, an aspiring frontend developer based in Canada. Over the past year, I've dedicated myself to mastering HTML, CSS, JavaScript, TypeScript, React and Next.js. What started as a curiosity about how websites function has grown into a passion for building visually appealing and responsive web applications. I enjoy the process of transforming concepts into interactive digital experiences. Outside of coding, I'm always eager to learn about new technologies and enjoy reading classic literature and history.";

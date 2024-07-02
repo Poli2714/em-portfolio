@@ -1,16 +1,16 @@
-type PageHeaderProps = {
+type ChildPageHeaderProps = {
   className?: string;
   description: string;
   mainTitle: string;
   secondaryTitle: string;
 };
 
-function PageHeader({
+function ChildPageHeader({
   className,
   description,
   mainTitle,
   secondaryTitle,
-}: PageHeaderProps) {
+}: ChildPageHeaderProps) {
   return (
     <header className={className}>
       <h1 className='mb-3 font-semibold md:mb-4'>{mainTitle}</h1>
@@ -22,4 +22,4 @@ function PageHeader({
   );
 }
 
-export default PageHeader;
+export default ChildPageHeader;

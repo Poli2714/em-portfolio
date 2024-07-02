@@ -1,21 +1,21 @@
-export type ProjectImg = {
+export type TPhoto = {
   alt_description: string;
-  img_dark: string;
-  img_light?: string;
+  light_mode: string;
+  dark_mode?: string;
 };
 
-export type ProjectFeature = {
+export type TProjectFeature = {
   name: string;
   description: string;
 };
 
-export type Project = {
+export type TProject = {
   date: string;
-  features: Array<ProjectFeature>;
+  features: Array<TProjectFeature>;
   github_repo: string;
   goals: Array<string>;
   id: string;
-  image: Array<ProjectImg>;
+  images: Array<TPhoto>;
   name: string;
   route: string;
   short_description: string;

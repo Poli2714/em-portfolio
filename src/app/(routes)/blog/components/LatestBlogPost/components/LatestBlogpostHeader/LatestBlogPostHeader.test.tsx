@@ -12,9 +12,15 @@ test('renders LatestBlogPostHeader', () => {
       title='Some title'
     />
   );
+  const paragraphs = screen.getAllByRole('paragraph');
 
-  expect(screen.getAllByRole('paragraph')).toHaveLength(2);
+  expect(paragraphs).toHaveLength(2);
+  expect(paragraphs[0]).toHaveTextContent('Webdev');
+  expect(paragraphs[1]).toHaveTextContent('Some description');
+
   expect(
     screen.getByRole('heading', { level: 3, name: 'Some title' })
   ).toBeInTheDocument();
+
+  expect(screen.getByRole('link')).toHaveAttribute('href', '/blog/some-slug');
 });

@@ -1,15 +1,18 @@
 import { expect, test, vi } from 'vitest';
 import { render, screen } from '@testing-library/react';
 
-import MyStory from './MyStory';
+import MyStory from './MyStoryShort';
 
 vi.mock('@/components/ui', () => ({
   SectionTitle: () => <div>Mock section title</div>,
 }));
 
 test('renders, MyStory', () => {
-  render(<MyStory />);
+  render(<MyStory story='Test story.' />);
+  const paragraph = screen.getByRole('paragraph');
 
-  expect(screen.getByRole('paragraph')).toBeInTheDocument();
+  expect(paragraph).toBeInTheDocument();
+  expect(paragraph).toHaveTextContent(/^test story. my story.$/i);
+
   expect(screen.getByRole('link', { name: 'My story.' })).toBeInTheDocument();
 });

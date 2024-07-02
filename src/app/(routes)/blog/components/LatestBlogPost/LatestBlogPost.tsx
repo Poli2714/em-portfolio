@@ -1,18 +1,22 @@
 import { AspectRatio } from '@/components/shadcn';
-import { BlogPostMetaInfo } from '@/components/ui';
+import { BlogPostMetaInfo, Photo } from '@/components/ui';
 import { LatestBlogPostHeader } from './components';
 
-import { BlogPost } from '@/types/blog-post';
+import { TBlogPost } from '@/types/blog-post';
 
 type LatestBlogPostProps = {
-  blogPost: BlogPost;
+  blogPost: TBlogPost;
 };
 
 function LatestBlogPost({ blogPost }: LatestBlogPostProps) {
   return (
     <div className='grid gap-12 lg:grid-cols-2' data-testid='latest-blog-post'>
       <AspectRatio ratio={5 / 4}>
-        <div className='h-full w-full bg-primary'></div>
+        <Photo
+          altDescription={blogPost.images[0].alt_description}
+          lightMode={blogPost.images[0].light_mode}
+          darkMode={blogPost.images[0].dark_mode}
+        />
       </AspectRatio>
       <div className='flex flex-col gap-y-8 lg:justify-center'>
         <LatestBlogPostHeader

@@ -1,12 +1,12 @@
 import { AspectRatio } from '@/components/shadcn';
+import { Photo } from '@/components/ui';
 import { ProjectDateAndWebsite } from './components';
-import { ProjectImage } from '@/components/ui';
 import { ProjectPageSection } from '..';
 
-import { Project } from '@/types/project';
+import { TProject } from '@/types/project';
 
 type ProjectGoalProps = {
-  project: Project;
+  project: TProject;
 };
 
 function ProjectGoal({ project }: ProjectGoalProps) {
@@ -24,10 +24,10 @@ function ProjectGoal({ project }: ProjectGoalProps) {
         <ProjectDateAndWebsite date={project.date} website={project.website} />
       </ProjectPageSection>
       <AspectRatio className='rounded-md shadow-lg' ratio={16 / 9}>
-        <ProjectImage
-          altDescription={project.image[0].alt_description}
-          imgDark={project.image[0].img_dark}
-          imgLight={project.image[0].img_light}
+        <Photo
+          altDescription={project.images[0].alt_description}
+          lightMode={project.images[0].light_mode}
+          darkMode={project.images[0].dark_mode}
         />
       </AspectRatio>
     </div>

@@ -1,39 +1,23 @@
-import { AspectRatio } from '@/components/shadcn';
-import { ProjectImage, ProjectTechStack, VisitProject } from '..';
+import { ProjectCardContent, ProjectCardHeader } from './components';
 
-import { Project } from '@/types/project';
+import { TProject } from '@/types/project';
 
 type ProjectCardProps = {
-  project: Project;
-  size?: 'sm' | 'lg';
+  className?: string;
+  project: TProject;
 };
 
-function ProjectCard({ project, size = 'sm' }: ProjectCardProps) {
+function ProjectCard({ className, project }: ProjectCardProps) {
   return (
     <div className='flex w-full flex-col gap-y-6' data-testid='project-card'>
-      <AspectRatio className='rounded-md shadow-lg' ratio={16 / 9}>
-        <ProjectImage
-          altDescription={project.image[0].alt_description}
-          imgDark={project.image[0].img_dark}
-          imgLight={project.image[0].img_light}
-        />
-      </AspectRatio>
-      <div
-        className={`grid gap-y-2 ${size === 'lg' ? 'gap-y-4 lg:grid-cols-2 lg:gap-x-20' : null}`}
-      >
-        <h4 className='text-2xl font-semibold'>{project.name}</h4>
-        <p
-          className={`mb-2 text-lg ${size === 'lg' ? 'row-start-3 mt-2 lg:row-span-3 lg:mt-0' : null}`}
-        >
-          {project.short_description}
-        </p>
-        <ProjectTechStack stack={project.stack} />
-        <VisitProject
-          className='mt-4 place-self-start'
-          label='Visit Project'
-          route={project.route}
-        />
-      </div>
+      <ProjectCardHeader image={project.images[0]} />
+      <ProjectCardContent
+        className={className}
+        projectTitle={project.name}
+        route={project.route}
+        shortDescription={project.short_description}
+        techStack={project.stack}
+      />
     </div>
   );
 }

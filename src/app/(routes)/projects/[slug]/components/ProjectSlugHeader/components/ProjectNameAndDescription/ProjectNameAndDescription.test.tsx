@@ -10,9 +10,11 @@ test('renders ProjectNameAndDescription', () => {
       name='Test name'
     />
   );
+  const paragraph = screen.getByRole('paragraph');
 
   expect(
     screen.getByRole('heading', { level: 1, name: 'Test name' })
   ).toBeInTheDocument();
-  expect(screen.getByRole('paragraph')).toBeInTheDocument();
+  expect(paragraph).toBeInTheDocument();
+  expect(paragraph).toHaveTextContent(/^test description$/i);
 });

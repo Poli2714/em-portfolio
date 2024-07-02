@@ -2,7 +2,7 @@ import { expect, test, vi } from 'vitest';
 import { render, screen } from '@testing-library/react';
 
 import LatestBlogPost from './LatestBlogPost';
-import { blog_posts } from '@/lib/blog-posts';
+import { __blog_posts__ } from '@/__mocks__/__block-posts__';
 
 vi.mock('@/components/shadcn', () => ({
   AspectRatio: () => <div>Mock blogpost image</div>,
@@ -10,6 +10,7 @@ vi.mock('@/components/shadcn', () => ({
 
 vi.mock('@/components/ui', () => ({
   BlogPostMetaInfo: () => <div>Mock meta info</div>,
+  Photo: () => <div>Mock photo</div>,
 }));
 
 vi.mock('./components', () => ({
@@ -17,7 +18,7 @@ vi.mock('./components', () => ({
 }));
 
 test('renders LatestBlogPost', () => {
-  render(<LatestBlogPost blogPost={blog_posts[0]} />);
+  render(<LatestBlogPost blogPost={__blog_posts__[0]} />);
 
   expect(screen.getByTestId('latest-blog-post')).toBeInTheDocument();
 });

@@ -1,11 +1,11 @@
 import { expect, test } from 'vitest';
 import { render, screen } from '@testing-library/react';
 
-import PageHeader from './PageHeader';
+import ChildPageHeader from './ChildPageHeader';
 
 test('renders ProjectsPageHeader', () => {
   render(
-    <PageHeader
+    <ChildPageHeader
       description='Test description'
       mainTitle='Test main title'
       secondaryTitle='Test secondary title'

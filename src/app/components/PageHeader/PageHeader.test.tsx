@@ -15,7 +15,6 @@ vi.mock('@/components/ui', () => ({
 
 test('renders PageHeader', async () => {
   render(<PageHeader />);
-  screen.debug();
 
   expect(screen.queryByRole('banner')).toBeInTheDocument();
   expect(screen.getByRole('link', { name: 'Contact me' })).toBeInTheDocument();

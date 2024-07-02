@@ -2,18 +2,15 @@ import { expect, test, vi } from 'vitest';
 import { render, screen } from '@testing-library/react';
 
 import ProjectCard from './ProjectCard';
-import { projects } from '@/lib/projects';
+import { __projects__ } from '@/__mocks__/__projects__';
 
-vi.mock('..', () => ({
-  ProjectImage: () => <div>Mock project image</div>,
-  ProjectTechStack: () => <div>Mock project skills</div>,
-  VisitProject: () => <div>Mock visit project</div>,
+vi.mock('./components', () => ({
+  ProjectCardContent: () => <div>Mock content</div>,
+  ProjectCardHeader: () => <div>Mock header</div>,
 }));
 
 test('renders ProjectCard', () => {
-  render(<ProjectCard project={projects[0]} />);
+  render(<ProjectCard project={__projects__[0]} />);
 
   expect(screen.getByTestId('project-card')).toBeInTheDocument();
-  expect(screen.getByRole('heading', { level: 4 })).toBeInTheDocument();
-  expect(screen.getByRole('paragraph')).toBeInTheDocument();
 });

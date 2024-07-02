@@ -9,7 +9,7 @@ test('renders BlogPostMetaInfo', () => {
   expect(
     screen.getByRole('heading', { level: 4, name: 'Elgun' })
   ).toBeInTheDocument();
-  expect(screen.getByRole('paragraph').textContent).toMatch(
+  expect(screen.getByRole('paragraph')).toHaveTextContent(
     /^June 30, 2024.*5 min read$/
   );
 });

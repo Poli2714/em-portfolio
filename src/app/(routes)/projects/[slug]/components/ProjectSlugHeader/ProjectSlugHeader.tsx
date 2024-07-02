@@ -1,11 +1,11 @@
 import { AspectRatio } from '@/components/shadcn';
-import { ProjectImage, ProjectTechStack } from '@/components/ui';
+import { Photo, ProjectTechStack } from '@/components/ui';
 import { ProjectLinks, ProjectNameAndDescription } from './components';
 
-import { Project } from '@/types/project';
+import { TProject } from '@/types/project';
 
 type ProjectSlugHeaderProps = {
-  project: Project;
+  project: TProject;
 };
 
 function ProjectSlugHeader({ project }: ProjectSlugHeaderProps) {
@@ -23,10 +23,10 @@ function ProjectSlugHeader({ project }: ProjectSlugHeaderProps) {
         />
       </div>
       <AspectRatio className='rounded-md shadow-lg' ratio={16 / 9}>
-        <ProjectImage
-          altDescription={project.image[0].alt_description}
-          imgDark={project.image[0].img_dark}
-          imgLight={project.image[0].img_light}
+        <Photo
+          altDescription={project.images[0].alt_description}
+          lightMode={project.images[0].light_mode}
+          darkMode={project.images[0].dark_mode}
         />
       </AspectRatio>
     </header>

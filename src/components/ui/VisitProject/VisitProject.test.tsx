@@ -4,7 +4,7 @@ import { render, screen } from '@testing-library/react';
 import VisitProject from './VisitProject';
 
 test('renders VisitProject', () => {
-  render(<VisitProject route='image-box' />);
+  render(<VisitProject label='Visit Project' route='image-box' />);
   const link = screen.getByRole('link', { name: 'Visit Project' });
 
   expect(link).toBeInTheDocument();

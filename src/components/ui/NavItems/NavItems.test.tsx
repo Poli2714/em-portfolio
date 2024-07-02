@@ -7,6 +7,26 @@ vi.mock('./components', () => ({
   NavItem: () => <div>Mock nav item</div>,
 }));
 
+vi.mock('@/lib/nav-items', () => ({
+  navItems: [
+    {
+      id: 'home',
+      label: 'Home',
+      href: '/',
+    },
+    {
+      id: 'my-story',
+      label: 'My Story',
+      href: '/my-story',
+    },
+    {
+      id: 'projects',
+      label: 'Projects',
+      href: '/projects',
+    },
+  ],
+}));
+
 test('renders NavItems', () => {
   render(<NavItems />);
 
