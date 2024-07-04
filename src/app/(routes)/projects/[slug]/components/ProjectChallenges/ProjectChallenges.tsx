@@ -4,14 +4,14 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/shadcn';
-import { ProjectPageSection } from '..';
-
-import { TProject } from '@/types/project';
 import {
   BlogPostLink,
   ChallengesSectionPhotoGrid,
   SolutionDetailList,
 } from './components';
+import { ProjectPageSection } from '..';
+
+import { TProject } from '@/types/project';
 
 type ProjectChallengesProps = {
   project: TProject;
