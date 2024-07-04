@@ -3,6 +3,55 @@ import { TProject } from '@/types/project';
 export const projects: Array<TProject> = [
   {
     date: 'June 2024',
+    challenges: [
+      {
+        name: 'Displaying photos in a waterfall/masonry grid while maintaining their order and original aspect ratios',
+        solution_summary: [
+          'I faced the challenge of displaying photos in a responsive grid while preserving their original aspect ratios and order. By creating a custom media query hook and dynamically adjusting the number of columns based on screen size, I achieved a visually appealing masonry layout.',
+        ],
+        isBlogged: true,
+        blog_post_link:
+          '/blog/responsive-waterfall-masonry-photo-grid-in-react',
+      },
+      {
+        name: 'Implementing pagination on the search page',
+        solution_summary: [
+          'To implement pagination on the search page, I created a component that dynamically generates pagination controls based on the current page and total pages. The pagination system ensures the following:',
+        ],
+        solution_details: [
+          {
+            id: 'detail1',
+            item: 'The pagination item for the current page is disabled to prevent unnecessary clicks.',
+          },
+          {
+            id: 'detail2',
+            item: 'The link to the previous page is disabled if the current page is the first page.',
+          },
+          {
+            id: 'detail3',
+            item: 'The link to the next page is disabled if the current page is the last page.',
+          },
+          {
+            id: 'detail4',
+            item: 'There are always three pagination items displayed, except when the total number of pages is less than three.',
+          },
+          {
+            id: 'detail5',
+            item: 'An ellipsis icon is displayed before the next page link to indicate more pages. This ellipsis is hidden if the current page is the page before the last page or if there are only three total pages.',
+          },
+        ],
+        isBlogged: false,
+        blog_post_link: '',
+      },
+      {
+        name: 'Implementing instant UI updates for collection name edits',
+        solution_summary: [
+          "To ensure that changes to a collection's name appear instantly on the UI, I used a custom useOptimisticCollectionNameContext hook, created with React's useContext and useOptimistic hooks. When the user submits a new collection name, the UI updates immediately by setting the optimistic state. The change is then asynchronously saved to the database. If the update fails, an error message is displayed. This approach provides a smooth and responsive user experience by eliminating wait times for database updates.",
+        ],
+        isBlogged: false,
+        blog_post_link: '',
+      },
+    ],
     features: [
       {
         name: 'Search Functionality',
@@ -67,9 +116,49 @@ export const projects: Array<TProject> = [
     id: 'image-box',
     images: [
       {
-        alt_description: 'ImageBox main page screenshoot',
-        light_mode: '/imageBox/imageBox-dark-1.png',
-        dark_mode: '/imageBox/imageBox-light-1.png',
+        alt_description: 'ImageBox main page for desktop',
+        light_mode: '/imageBox/imageBox-lm-1.png',
+        dark_mode: '/imageBox/imageBox-dm-1.png',
+      },
+      {
+        alt_description: 'ImageBox search page for desktop',
+        light_mode: '/imageBox/imageBox-lm-2.png',
+        dark_mode: '/imageBox/imageBox-dm-2.png',
+      },
+      {
+        alt_description: 'ImageBox photo page for desktop',
+        light_mode: '/imageBox/imageBox-lm-3.png',
+        dark_mode: '/imageBox/imageBox-dm-3.png',
+      },
+      {
+        alt_description: 'ImageBox photo page for mobile',
+        light_mode: '/imageBox/imageBox-lm-4.png',
+        dark_mode: '/imageBox/imageBox-dm-4.png',
+      },
+      {
+        alt_description: 'ImageBox add to collection popup',
+        light_mode: '/imageBox/imageBox-lm-5.png',
+        dark_mode: '/imageBox/imageBox-dm-5.png',
+      },
+      {
+        alt_description: 'ImageBox search page pagination',
+        light_mode: '/imageBox/imageBox-lm-6.png',
+        dark_mode: '/imageBox/imageBox-dm-6.png',
+      },
+      {
+        alt_description: 'ImageBox edit collection popup',
+        light_mode: '/imageBox/imageBox-lm-7.png',
+        dark_mode: '/imageBox/imageBox-dm-7.png',
+      },
+      {
+        alt_description: 'ImageBox user collections page',
+        light_mode: '/imageBox/imageBox-lm-8.png',
+        dark_mode: '/imageBox/imageBox-dm-8.png',
+      },
+      {
+        alt_description: 'ImageBox Beach collection page',
+        light_mode: '/imageBox/imageBox-lm-9.png',
+        dark_mode: '/imageBox/imageBox-dm-9.png',
       },
     ],
     name: 'ImageBox',
@@ -91,6 +180,7 @@ export const projects: Array<TProject> = [
   },
   {
     date: 'May 2024',
+    challenges: [],
     features: [
       {
         name: 'Search Functionality',

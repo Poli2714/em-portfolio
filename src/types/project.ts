@@ -4,6 +4,19 @@ export type TPhoto = {
   dark_mode?: string;
 };
 
+export type TSolutionDetail = {
+  id: string;
+  item: string;
+};
+
+export type TProjectChallenge = {
+  name: string;
+  solution_summary: Array<string>;
+  solution_details?: Array<TSolutionDetail>;
+  isBlogged: boolean;
+  blog_post_link: string;
+};
+
 export type TProjectFeature = {
   name: string;
   description: string;
@@ -11,6 +24,7 @@ export type TProjectFeature = {
 
 export type TProject = {
   date: string;
+  challenges: Array<TProjectChallenge>;
   features: Array<TProjectFeature>;
   github_repo: string;
   goals: Array<string>;

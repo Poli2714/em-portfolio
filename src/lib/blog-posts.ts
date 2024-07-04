@@ -63,7 +63,10 @@ export function useMediaQuery(query: string) {
   const numberOfCols = isXLarge ? 4 : isLarge ? 3 : isMedium ? 2 : 1;
 
   return (
-    <ul className={\`grid h-auto w-full gap-x-4 grid-cols-\${numberOfCols}\`}>
+    <ul className={\`grid h-auto w-full gap-x-4 \${isXLarge ? 'grid-cols-4'
+    : isLarge ? 'grid-cols-3'
+    : isMedium ? 'grid-cols-2'
+    : 'grid-cols-1'}\`}>
       ...
     </ul>
   );

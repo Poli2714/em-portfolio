@@ -2,6 +2,20 @@ import { TProject } from '@/types/project';
 
 export const __projects__: Array<TProject> = [
   {
+    challenges: [
+      {
+        name: 'Test challenge name1',
+        solution_summary: ['Test summary1'],
+        isBlogged: true,
+        blog_post_link: '/blog/test-blog-post1',
+      },
+      {
+        name: 'Test challenge name2',
+        solution_summary: ['Test summary2'],
+        isBlogged: false,
+        blog_post_link: '',
+      },
+    ],
     date: 'Test date1',
     features: [
       {
@@ -23,8 +37,48 @@ export const __projects__: Array<TProject> = [
     images: [
       {
         alt_description: 'Test alt-description1',
-        light_mode: 'Test1.png',
-        dark_mode: 'Test2.png',
+        light_mode: 'Test-lm-1.png',
+        dark_mode: 'Test-dm-1.png',
+      },
+      {
+        alt_description: 'Test alt-description2',
+        light_mode: 'Test-lm-2.png',
+        dark_mode: 'Test-dm-2.png',
+      },
+      {
+        alt_description: 'Test alt-description3',
+        light_mode: 'Test-lm-3.png',
+        dark_mode: 'Test-dm-3.png',
+      },
+      {
+        alt_description: 'Test alt-description4',
+        light_mode: 'Test-lm-4.png',
+        dark_mode: 'Test-dm-4.png',
+      },
+      {
+        alt_description: 'Test alt-description5',
+        light_mode: 'Test-lm-5.png',
+        dark_mode: 'Test-dm-5.png',
+      },
+      {
+        alt_description: 'Test alt-description6',
+        light_mode: 'Test-lm-6.png',
+        dark_mode: 'Test-dm-6.png',
+      },
+      {
+        alt_description: 'Test alt-description7',
+        light_mode: 'Test-lm-7.png',
+        dark_mode: 'Test-dm-7.png',
+      },
+      {
+        alt_description: 'Test alt-description8',
+        light_mode: 'Test-lm-8.png',
+        dark_mode: 'Test-dm-8.png',
+      },
+      {
+        alt_description: 'Test alt-description9',
+        light_mode: 'Test-lm-9.png',
+        dark_mode: 'Test-dm-9.png',
       },
     ],
     name: 'Test name1',
@@ -35,6 +89,20 @@ export const __projects__: Array<TProject> = [
     website: 'test-website.com1',
   },
   {
+    challenges: [
+      {
+        name: 'Test challenge name1',
+        solution_summary: ['Test summary1'],
+        isBlogged: true,
+        blog_post_link: '/blog/test-blog-post1',
+      },
+      {
+        name: 'Test challenge name2',
+        solution_summary: ['Test summary2'],
+        isBlogged: false,
+        blog_post_link: '',
+      },
+    ],
     date: 'Test date2',
     features: [
       {
@@ -56,8 +124,39 @@ export const __projects__: Array<TProject> = [
     images: [
       {
         alt_description: 'Test alt-description1',
-        light_mode: 'Test1.png',
-        dark_mode: 'Test2.png',
+        light_mode: 'Test-lm-1.png',
+      },
+      {
+        alt_description: 'Test alt-description2',
+        light_mode: 'Test-lm-2.png',
+      },
+      {
+        alt_description: 'Test alt-description3',
+        light_mode: 'Test-lm-3.png',
+      },
+      {
+        alt_description: 'Test alt-description4',
+        light_mode: 'Test-lm-4.png',
+      },
+      {
+        alt_description: 'Test alt-description5',
+        light_mode: 'Test-lm-5.png',
+      },
+      {
+        alt_description: 'Test alt-description6',
+        light_mode: 'Test-lm-6.png',
+      },
+      {
+        alt_description: 'Test alt-description7',
+        light_mode: 'Test-lm-7.png',
+      },
+      {
+        alt_description: 'Test alt-description8',
+        light_mode: 'Test-lm-8.png',
+      },
+      {
+        alt_description: 'Test alt-description9',
+        light_mode: 'Test-lm-9.png',
       },
     ],
     name: 'Test name2',
@@ -71,6 +170,20 @@ export const __projects__: Array<TProject> = [
 
 export const __4_projects__: Array<TProject> = [
   {
+    challenges: [
+      {
+        name: 'Test challenge name1',
+        solution_summary: ['Test summary1'],
+        isBlogged: true,
+        blog_post_link: '/blog/test-blog-post1',
+      },
+      {
+        name: 'Test challenge name2',
+        solution_summary: ['Test summary2'],
+        isBlogged: false,
+        blog_post_link: '',
+      },
+    ],
     date: 'Test date1',
     features: [
       {
@@ -92,8 +205,48 @@ export const __4_projects__: Array<TProject> = [
     images: [
       {
         alt_description: 'Test alt-description1',
-        light_mode: 'Test1.png',
-        dark_mode: 'Test2.png',
+        light_mode: 'Test-lm-1.png',
+        dark_mode: 'Test-dm-1.png',
+      },
+      {
+        alt_description: 'Test alt-description2',
+        light_mode: 'Test-lm-2.png',
+        dark_mode: 'Test-dm-2.png',
+      },
+      {
+        alt_description: 'Test alt-description3',
+        light_mode: 'Test-lm-3.png',
+        dark_mode: 'Test-dm-3.png',
+      },
+      {
+        alt_description: 'Test alt-description4',
+        light_mode: 'Test-lm-4.png',
+        dark_mode: 'Test-dm-4.png',
+      },
+      {
+        alt_description: 'Test alt-description5',
+        light_mode: 'Test-lm-5.png',
+        dark_mode: 'Test-dm-5.png',
+      },
+      {
+        alt_description: 'Test alt-description6',
+        light_mode: 'Test-lm-6.png',
+        dark_mode: 'Test-dm-6.png',
+      },
+      {
+        alt_description: 'Test alt-description7',
+        light_mode: 'Test-lm-7.png',
+        dark_mode: 'Test-dm-7.png',
+      },
+      {
+        alt_description: 'Test alt-description8',
+        light_mode: 'Test-lm-8.png',
+        dark_mode: 'Test-dm-8.png',
+      },
+      {
+        alt_description: 'Test alt-description9',
+        light_mode: 'Test-lm-9.png',
+        dark_mode: 'Test-dm-9.png',
       },
     ],
     name: 'Test name1',
@@ -104,6 +257,20 @@ export const __4_projects__: Array<TProject> = [
     website: 'test-website.com1',
   },
   {
+    challenges: [
+      {
+        name: 'Test challenge name1',
+        solution_summary: ['Test summary1'],
+        isBlogged: true,
+        blog_post_link: '/blog/test-blog-post1',
+      },
+      {
+        name: 'Test challenge name2',
+        solution_summary: ['Test summary2'],
+        isBlogged: false,
+        blog_post_link: '',
+      },
+    ],
     date: 'Test date2',
     features: [
       {
@@ -125,8 +292,48 @@ export const __4_projects__: Array<TProject> = [
     images: [
       {
         alt_description: 'Test alt-description1',
-        light_mode: 'Test1.png',
-        dark_mode: 'Test2.png',
+        light_mode: 'Test-lm-1.png',
+        dark_mode: 'Test-dm-1.png',
+      },
+      {
+        alt_description: 'Test alt-description2',
+        light_mode: 'Test-lm-2.png',
+        dark_mode: 'Test-dm-2.png',
+      },
+      {
+        alt_description: 'Test alt-description3',
+        light_mode: 'Test-lm-3.png',
+        dark_mode: 'Test-dm-3.png',
+      },
+      {
+        alt_description: 'Test alt-description4',
+        light_mode: 'Test-lm-4.png',
+        dark_mode: 'Test-dm-4.png',
+      },
+      {
+        alt_description: 'Test alt-description5',
+        light_mode: 'Test-lm-5.png',
+        dark_mode: 'Test-dm-5.png',
+      },
+      {
+        alt_description: 'Test alt-description6',
+        light_mode: 'Test-lm-6.png',
+        dark_mode: 'Test-dm-6.png',
+      },
+      {
+        alt_description: 'Test alt-description7',
+        light_mode: 'Test-lm-7.png',
+        dark_mode: 'Test-dm-7.png',
+      },
+      {
+        alt_description: 'Test alt-description8',
+        light_mode: 'Test-lm-8.png',
+        dark_mode: 'Test-dm-8.png',
+      },
+      {
+        alt_description: 'Test alt-description9',
+        light_mode: 'Test-lm-9.png',
+        dark_mode: 'Test-dm-9.png',
       },
     ],
     name: 'Test name2',
@@ -137,6 +344,20 @@ export const __4_projects__: Array<TProject> = [
     website: 'test-website.com2',
   },
   {
+    challenges: [
+      {
+        name: 'Test challenge name1',
+        solution_summary: ['Test summary1'],
+        isBlogged: true,
+        blog_post_link: '/blog/test-blog-post1',
+      },
+      {
+        name: 'Test challenge name2',
+        solution_summary: ['Test summary2'],
+        isBlogged: false,
+        blog_post_link: '',
+      },
+    ],
     date: 'Test date3',
     features: [
       {
@@ -158,8 +379,39 @@ export const __4_projects__: Array<TProject> = [
     images: [
       {
         alt_description: 'Test alt-description1',
-        light_mode: 'Test1.png',
-        dark_mode: 'Test2.png',
+        light_mode: 'Test-lm-1.png',
+      },
+      {
+        alt_description: 'Test alt-description2',
+        light_mode: 'Test-lm-2.png',
+      },
+      {
+        alt_description: 'Test alt-description3',
+        light_mode: 'Test-lm-3.png',
+      },
+      {
+        alt_description: 'Test alt-description4',
+        light_mode: 'Test-lm-4.png',
+      },
+      {
+        alt_description: 'Test alt-description5',
+        light_mode: 'Test-lm-5.png',
+      },
+      {
+        alt_description: 'Test alt-description6',
+        light_mode: 'Test-lm-6.png',
+      },
+      {
+        alt_description: 'Test alt-description7',
+        light_mode: 'Test-lm-7.png',
+      },
+      {
+        alt_description: 'Test alt-description8',
+        light_mode: 'Test-lm-8.png',
+      },
+      {
+        alt_description: 'Test alt-description9',
+        light_mode: 'Test-lm-9.png',
       },
     ],
     name: 'Test name3',
@@ -170,6 +422,20 @@ export const __4_projects__: Array<TProject> = [
     website: 'test-website.com3',
   },
   {
+    challenges: [
+      {
+        name: 'Test challenge name1',
+        solution_summary: ['Test summary1'],
+        isBlogged: true,
+        blog_post_link: '/blog/test-blog-post1',
+      },
+      {
+        name: 'Test challenge name2',
+        solution_summary: ['Test summary2'],
+        isBlogged: false,
+        blog_post_link: '',
+      },
+    ],
     date: 'Test date4',
     features: [
       {
@@ -191,8 +457,48 @@ export const __4_projects__: Array<TProject> = [
     images: [
       {
         alt_description: 'Test alt-description1',
-        light_mode: 'Test1.png',
-        dark_mode: 'Test2.png',
+        light_mode: 'Test-lm-1.png',
+        dark_mode: 'Test-dm-1.png',
+      },
+      {
+        alt_description: 'Test alt-description2',
+        light_mode: 'Test-lm-2.png',
+        dark_mode: 'Test-dm-2.png',
+      },
+      {
+        alt_description: 'Test alt-description3',
+        light_mode: 'Test-lm-3.png',
+        dark_mode: 'Test-dm-3.png',
+      },
+      {
+        alt_description: 'Test alt-description4',
+        light_mode: 'Test-lm-4.png',
+        dark_mode: 'Test-dm-4.png',
+      },
+      {
+        alt_description: 'Test alt-description5',
+        light_mode: 'Test-lm-5.png',
+        dark_mode: 'Test-dm-5.png',
+      },
+      {
+        alt_description: 'Test alt-description6',
+        light_mode: 'Test-lm-6.png',
+        dark_mode: 'Test-dm-6.png',
+      },
+      {
+        alt_description: 'Test alt-description7',
+        light_mode: 'Test-lm-7.png',
+        dark_mode: 'Test-dm-7.png',
+      },
+      {
+        alt_description: 'Test alt-description8',
+        light_mode: 'Test-lm-8.png',
+        dark_mode: 'Test-dm-8.png',
+      },
+      {
+        alt_description: 'Test alt-description9',
+        light_mode: 'Test-lm-9.png',
+        dark_mode: 'Test-dm-9.png',
       },
     ],
     name: 'Test name4',

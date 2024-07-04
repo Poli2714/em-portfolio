@@ -20,9 +20,9 @@ function ProjectFeatures({ project }: ProjectFeaturesProps) {
       </ProjectPageSection>
       <AspectRatio className='rounded-md shadow-lg' ratio={16 / 9}>
         <Photo
-          altDescription={project.images[0].alt_description}
-          lightMode={project.images[0].light_mode}
-          darkMode={project.images[0].dark_mode}
+          altDescription={project.images[2].alt_description}
+          lightMode={project.images[2].light_mode}
+          darkMode={project.images[2].dark_mode}
         />
       </AspectRatio>
     </div>
