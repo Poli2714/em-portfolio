@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 
 import { PageFooter, PageHeader } from './components';
-import { ThemeProvider } from '@/components/shadcn';
+import { ThemeProvider, Toaster } from '@/components/shadcn';
 
 import '@/styles/globals.css';
 
@@ -32,6 +32,7 @@ export default function RootLayout({
             {children}
             <PageFooter />
           </div>
+          <Toaster richColors />
         </ThemeProvider>
       </body>
     </html>

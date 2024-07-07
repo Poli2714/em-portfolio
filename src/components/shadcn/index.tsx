@@ -13,6 +13,15 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from './dropdown-menu';
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from './form';
+import { Input } from './input';
 import { Separator } from './separator';
 import {
   Sheet,
@@ -22,7 +31,9 @@ import {
   SheetTitle,
   SheetTrigger,
 } from './sheet';
+import { Textarea } from './textarea';
 import { ThemeProvider } from './theme-provider';
+import { Toaster } from './sonner';
 
 export {
   Accordion,
@@ -36,6 +47,13 @@ export {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+  Input,
   Separator,
   Sheet,
   SheetClose,
@@ -43,5 +61,7 @@ export {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
+  Textarea,
   ThemeProvider,
+  Toaster,
 };
