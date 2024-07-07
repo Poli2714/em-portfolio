@@ -1,7 +1,7 @@
 import { expect, test } from 'vitest';
 import { render, screen } from '@testing-library/react';
 
-import LatestBlogPostHeader from './LatestBlogpostHeader';
+import LatestBlogPostHeader from './LatestBlogPostHeader';
 
 test('renders LatestBlogPostHeader', () => {
   render(

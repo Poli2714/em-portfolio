@@ -8,7 +8,7 @@ export default function ProjectsHomePage() {
     <>
       <ChildPageHeader
         className='text-center'
-        description='Some description'
+        description="Welcome to my Projects page! Here you'll find a selection of my web development work. Click on any project to see more details, including the technologies used and the challenges faced."
         mainTitle='Portfolio'
         secondaryTitle='Projects'
       />

@@ -1,5 +1,5 @@
-import { LatestBlogPost } from './components';
 import { ChildPageHeader } from '@/components/ui';
+import { LatestBlogPost } from './components';
 
 import { blog_posts } from '@/lib/blog-posts';
 
