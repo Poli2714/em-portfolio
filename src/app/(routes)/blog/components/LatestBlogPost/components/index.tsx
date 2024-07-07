@@ -1,3 +1,3 @@
-import LatestBlogPostHeader from './LatestBlogpostHeader/LatestBlogpostHeader';
+import LatestBlogPostHeader from './LatestBlogPostHeader/LatestBlogPostHeader';
 
 export { LatestBlogPostHeader };
