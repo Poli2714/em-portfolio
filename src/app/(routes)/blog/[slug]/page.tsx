@@ -21,9 +21,10 @@ export default function BlogPostSlugPage({ params }: BlogPostSlugPageProps) {
     <>
       <BlogPostHeader blogPost={blogPost} />
       <div className='mx-auto max-w-[80ch] space-y-12'>
-        {blogPost.sections.map((section) => (
+        {blogPost.sections.map((section, i) => (
           <BlogPostSection
             code={section.code}
+            key={i}
             image={section.image}
             paragraphs={section.paragraphs}
             subtitle={section.subtitle}

@@ -26,7 +26,7 @@ function ProjectChallenges({ project }: ProjectChallengesProps) {
       <ProjectPageSection title='Challenges'>
         <Accordion type='multiple' className='w-full'>
           {project.challenges.map((challenge, i) => (
-            <AccordionItem value={`item-${i + 1}`}>
+            <AccordionItem key={i} value={`item-${i + 1}`}>
               <AccordionTrigger className='text-left'>
                 {challenge.name}
               </AccordionTrigger>

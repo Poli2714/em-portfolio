@@ -16,8 +16,10 @@ function BlogPostSection({
           {subtitle}
         </h3>
       ) : null}
-      {paragraphs.map((paragraph) => (
-        <p className='just text-pretty break-words text-lg'>{paragraph}</p>
+      {paragraphs.map((paragraph, i) => (
+        <p key={i} className='just text-pretty break-words text-lg'>
+          {paragraph}
+        </p>
       ))}
       {!!code ? (
         <pre className='overflow-auto rounded-md bg-foreground p-4 text-background'>
