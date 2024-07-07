@@ -13,8 +13,8 @@ vi.mock('@/components/ui', () => ({
   Photo: () => <div>Mock photo</div>,
 }));
 
-vi.mock('./components', () => ({
-  LatestBlogPostHeader: () => <div>Mock blogpost header</div>,
+vi.mock('./components/LatestBlogPostHeader/LatestBlogPostHeader', () => ({
+  default: () => <div>Mock blogpost header</div>,
 }));
 
 test('renders LatestBlogPost', () => {

@@ -1,6 +1,6 @@
 import { AspectRatio } from '@/components/shadcn';
 import { BlogPostMetaInfo, Photo } from '@/components/ui';
-import { LatestBlogPostHeader } from './components';
+import LatestBlogPostHeader from './components/LatestBlogPostHeader/LatestBlogPostHeader';
 
 import { TBlogPost } from '@/types/blog-post';
 
