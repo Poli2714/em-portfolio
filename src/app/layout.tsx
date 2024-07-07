@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 
-import { PageFooter, PageHeader } from './components';
 import { ThemeProvider, Toaster } from '@/components/shadcn';
 
 import '@/styles/globals.css';
@@ -20,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={inter.className}>
+      <body className={`${inter.className} flex min-h-dvh flex-col`}>
         <ThemeProvider
           attribute='class'
           defaultTheme='system'
@@ -28,9 +27,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <div className='px-[clamp(1rem,3dvw,3rem)] 2xl:container'>
-            <PageHeader />
             {children}
-            <PageFooter />
           </div>
           <Toaster richColors />
         </ThemeProvider>
