@@ -1,2 +1,11 @@
 export const my_story_short =
   "Hi, I'm Elgun Mehdiyev, an aspiring frontend developer based in Canada. Over the past year, I've dedicated myself to mastering HTML, CSS, JavaScript, TypeScript, React and Next.js. What started as a curiosity about how websites function has grown into a passion for building visually appealing and responsive web applications. I enjoy the process of transforming concepts into interactive digital experiences. Outside of coding, I'm always eager to learn about new technologies and enjoy reading classic literature and history.";
+
+export const my_story_long = [
+  "Hi, I'm Elgun Mehdiyev, an aspiring frontend developer based in Canada. My journey into the world of coding began over a year ago, driven by a curiosity about how websites function and a desire to create visually appealing and responsive web applications.",
+  "Before diving into the tech world, I had an extensive career as a diplomat in my home country, Azerbaijan, and served at Azerbaijan's diplomatic mission in Los Angeles, USA. This experience honed my skills in problem-solving, communication and adaptability, which have been incredibly valuable in my transition to tech.",
+  'Over the past year, I have dedicated myself to mastering HTML, CSS, JavaScript, React and Next.js. My enthusiasm for learning led me to expand my toolkit to include essential technologies like TypeScript and Tailwind CSS.',
+  'What excites me most about coding is the process of transforming ideas into interactive digital experiences. I am passionate about solving problems and creating something meaningful from scratch. My dedication to self-study has been persistent. I have consistently committed to learning and improving my skills every day.',
+  'While my focus has been on mastering web development over the past year, I also enjoy reading classic literature and history. These interests provide a balance to my tech pursuits, offering new perspectives and a deeper understanding of different cultures and eras. This blend of technical and literary interests helps me stay creative and inspired in my work.',
+  'My journey from diplomacy to frontend development has been unique and challenging, but it has also been incredibly rewarding. I look forward to continuing to grow as a developer and to contribute to the tech community with my projects and skills.',
+];
