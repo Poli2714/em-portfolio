@@ -1,7 +1,7 @@
 function ContactMePageHeader() {
   return (
     <header className='space-y-5 text-center md:space-y-6'>
-      <h1 className='text-[clamp(2.25rem,5.5dvw,3rem)] font-bold'>
+      <h1 className='text-[clamp(2.25rem,5.5dvw,3rem)] font-bold dark:text-highlight'>
         Contact me
       </h1>
       <p className='md:text-lg'>

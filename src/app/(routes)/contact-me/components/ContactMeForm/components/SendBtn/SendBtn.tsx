@@ -11,6 +11,7 @@ function SendBtn({ isPending }: SendBtnProps) {
     <Button
       className='gap-x-2 place-self-start'
       disabled={isPending}
+      size='lg'
       type='submit'
     >
       {isPending ? (

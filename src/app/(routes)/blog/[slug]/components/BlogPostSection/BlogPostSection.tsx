@@ -12,7 +12,7 @@ function BlogPostSection({
   return (
     <div className='space-y-7'>
       {!!subtitle ? (
-        <h3 className='text-[clamp(1.5rem,5dvw,2rem)] font-semibold leading-[clamp(2rem,5.5dvw,2.25rem)]'>
+        <h3 className='text-[clamp(1.5rem,5dvw,2rem)] font-semibold leading-[clamp(2rem,5.5dvw,2.25rem)] dark:text-highlight'>
           {subtitle}
         </h3>
       ) : null}
@@ -22,7 +22,7 @@ function BlogPostSection({
         </p>
       ))}
       {!!code ? (
-        <pre className='overflow-auto rounded-md bg-foreground p-4 text-background'>
+        <pre className='overflow-auto rounded-md bg-foreground p-4 text-background dark:bg-highlight'>
           <code>{code}</code>
         </pre>
       ) : null}

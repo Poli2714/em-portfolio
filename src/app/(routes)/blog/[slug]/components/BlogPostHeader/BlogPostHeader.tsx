@@ -17,7 +17,7 @@ function BlogPostHeader({ blogPost }: BlogPostHeaderProps) {
       >
         <div className='space-y-6'>
           <AllPosts />
-          <h1 className='text-[clamp(2rem,5dvw,3rem)] font-bold'>
+          <h1 className='text-[clamp(2rem,5dvw,3rem)] font-bold dark:text-highlight'>
             {blogPost.title}
           </h1>
         </div>

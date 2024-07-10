@@ -38,12 +38,14 @@ function SkillBadge({ skillName, logoDark, logoLight }: SkillBadgeProps) {
 
   return (
     <Badge
-      className='gap-x-2 rounded-md border-primary px-4 py-3 text-sm font-normal'
+      className='group gap-x-2 rounded-md border-primary px-4 py-3 text-sm font-normal'
       data-testid='skill-badge'
       variant='outline'
     >
       {skillLogo}
-      <p>{skillName}</p>
+      <p className='dark:transition-colors dark:group-hover:text-highlight'>
+        {skillName}
+      </p>
     </Badge>
   );
 }

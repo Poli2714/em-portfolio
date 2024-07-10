@@ -9,10 +9,16 @@ import {
   SheetTitle,
   SheetTrigger,
 } from '@/components/shadcn';
-import { ContactMeLink, MenuLinks } from './components';
+import { ContactMeLink, MenuNav } from './components';
 import { Logo, SocialMediaLinks } from '@/components/ui';
 
-function Menu() {
+import { TNavItem } from '@/types/nav-items';
+
+type MenuProps = {
+  navItems: Array<TNavItem>;
+};
+
+function Menu({ navItems }: MenuProps) {
   return (
     <Sheet>
       <SheetTrigger asChild>
@@ -28,7 +34,7 @@ function Menu() {
             </SheetClose>
           </SheetTitle>
         </SheetHeader>
-        <MenuLinks />
+        <MenuNav navItems={navItems} />
         <div className='mb-auto mt-14 inline-block'>
           <SheetClose asChild>
             <ContactMeLink />

@@ -3,6 +3,7 @@ import { render, screen } from '@testing-library/react';
 import { userEvent } from '@testing-library/user-event';
 
 import Menu from './Menu';
+import { __nav_items__ } from '@/__mocks__/__nav-items__';
 
 vi.mock('@/components/ui', () => ({
   Logo: () => (
@@ -15,11 +16,11 @@ vi.mock('@/components/ui', () => ({
 
 vi.mock('./components', () => ({
   ContactMeLink: () => <div>Mock contact me link</div>,
-  MenuLinks: () => <div>Mock menu links</div>,
+  MenuNav: () => <div>Mock menu links</div>,
 }));
 
 test('renders Menu', () => {
-  render(<Menu />);
+  render(<Menu navItems={__nav_items__} />);
 
   expect(screen.getByRole('button')).toBeInTheDocument();
   expect(screen.getByTestId('menu-icon')).toBeInTheDocument();
@@ -27,7 +28,7 @@ test('renders Menu', () => {
 
 test('displays sheet when user clicks on trigger button', async () => {
   const user = userEvent.setup();
-  render(<Menu />);
+  render(<Menu navItems={__nav_items__} />);
   const triggerBtn = screen.getByRole('button');
 
   await user.click(triggerBtn);
@@ -36,7 +37,7 @@ test('displays sheet when user clicks on trigger button', async () => {
 
 test('hides sheet when user clicks on escape while sheet is open', async () => {
   const user = userEvent.setup();
-  render(<Menu />);
+  render(<Menu navItems={__nav_items__} />);
   const triggerBtn = screen.getByRole('button');
 
   await user.click(triggerBtn);

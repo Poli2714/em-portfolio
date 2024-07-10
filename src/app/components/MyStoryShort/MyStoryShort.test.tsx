@@ -5,6 +5,7 @@ import MyStory from './MyStoryShort';
 
 vi.mock('@/components/ui', () => ({
   SectionTitle: () => <div>Mock section title</div>,
+  VisitLink: () => <div>Mock visit link</div>,
 }));
 
 test('renders, MyStory', () => {
@@ -12,7 +13,5 @@ test('renders, MyStory', () => {
   const paragraph = screen.getByRole('paragraph');
 
   expect(paragraph).toBeInTheDocument();
-  expect(paragraph).toHaveTextContent(/^test story. my story.$/i);
-
-  expect(screen.getByRole('link', { name: 'My story.' })).toBeInTheDocument();
+  expect(paragraph).toHaveTextContent(/^test story.$/i);
 });

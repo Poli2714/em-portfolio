@@ -5,7 +5,7 @@ function AllPosts() {
   return (
     <div className='inline-block'>
       <Link
-        className='group flex items-center gap-x-2 text-foreground/70 hover:text-foreground'
+        className='group flex items-center gap-x-2 text-foreground/70 hover:text-foreground dark:text-foreground dark:hover:text-highlight'
         href='/blog'
       >
         <ChevronLeftIcon

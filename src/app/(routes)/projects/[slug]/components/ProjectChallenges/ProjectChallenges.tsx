@@ -27,7 +27,7 @@ function ProjectChallenges({ project }: ProjectChallengesProps) {
         <Accordion type='multiple' className='w-full'>
           {project.challenges.map((challenge, i) => (
             <AccordionItem key={i} value={`item-${i + 1}`}>
-              <AccordionTrigger className='text-left'>
+              <AccordionTrigger className='text-left dark:text-highlight'>
                 {challenge.name}
               </AccordionTrigger>
               <AccordionContent className='flex flex-col gap-y-4'>

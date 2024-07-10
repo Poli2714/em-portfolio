@@ -5,7 +5,7 @@ import ProjectCardContent from './ProjectCardContent';
 
 vi.mock('@/components/ui', () => ({
   ProjectTechStack: () => <div>Mock tech stack</div>,
-  VisitProject: () => <div>Mock visit project link</div>,
+  VisitLink: () => <div>Mock visit project link</div>,
 }));
 
 test('renders ProjectCardContent', () => {

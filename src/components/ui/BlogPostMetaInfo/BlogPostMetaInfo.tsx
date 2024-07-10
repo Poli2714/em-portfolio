@@ -12,7 +12,7 @@ function BlogPostMetaInfo({ author, date, readTime }: BlogPostMetaInfoProps) {
       <div className='row-span-2 flex h-12 w-12 items-center justify-center rounded-full bg-primary/15'>
         <ImageIcon className='text-foreground/30' size={20} strokeWidth={1} />
       </div>
-      <h4 className='font-medium'>{author}</h4>
+      <h4 className='font-medium dark:text-highlight'>{author}</h4>
       <p className='flex items-center gap-x-2 text-sm'>
         {date} <span className='h-1 w-1 rounded-full bg-foreground'></span>{' '}
         {readTime} min read

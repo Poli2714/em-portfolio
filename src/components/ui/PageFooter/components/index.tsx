@@ -1,3 +1,3 @@
-import FooterNavLinks from './FooterNavLinks/FooterNavLinks';
+import FooterNav from './FooterNav/FooterNav';
 
-export { FooterNavLinks };
+export { FooterNav };

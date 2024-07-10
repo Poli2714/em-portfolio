@@ -4,7 +4,7 @@ import { render, screen } from '@testing-library/react';
 import ProjectLinks from './ProjectLinks';
 
 vi.mock('@/components/ui', () => ({
-  VisitProject: () => <div>Mock visit project</div>,
+  VisitLink: () => <div>Mock visit project</div>,
 }));
 
 test('renders ProjectLinks', () => {

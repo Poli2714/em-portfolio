@@ -1,4 +1,4 @@
 import ContactMeLink from './ContactMeLink/ContactMeLink';
-import MenuLinks from './MenuLinks/MenuLinks';
+import MenuNav from './MenuNav/MenuNav';
 
-export { ContactMeLink, MenuLinks };
+export { ContactMeLink, MenuNav };

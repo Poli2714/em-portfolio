@@ -9,7 +9,7 @@ type ProjectDateAndWebsiteprops = {
 
 function ProjectDateAndWebsite({ date, website }: ProjectDateAndWebsiteprops) {
   return (
-    <div className='space-y-5'>
+    <div className='space-y-5 dark:text-highlight'>
       <Separator className='bg-foreground' />
       <div className='flex items-center justify-between'>
         <span className='font-semibold'>Date</span>
@@ -20,7 +20,10 @@ function ProjectDateAndWebsite({ date, website }: ProjectDateAndWebsiteprops) {
         <span className='font-semibold' data-testid='project-website'>
           Website
         </span>
-        <Link className='underline underline-offset-4' href={website}>
+        <Link
+          className='underline underline-offset-4 transition-colors hover:text-primary'
+          href={website}
+        >
           {website}
         </Link>
       </div>

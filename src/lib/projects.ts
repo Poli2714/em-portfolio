@@ -9,7 +9,7 @@ export const projects: Array<TProject> = [
     date: 'June 2024',
     website: 'https://image-box-six.vercel.app',
     github_repo: 'https://github.com/Poli2714/image-box',
-    route: 'image-box',
+    route: '/projects/image-box',
     stack: [
       'nextjs',
       'typescript',
@@ -185,7 +185,7 @@ export const projects: Array<TProject> = [
     date: 'May 2024',
     website: 'https://audiophile-nine.vercel.app',
     github_repo: 'https://github.com/Poli2714/audiophile',
-    route: 'audiophile',
+    route: '/projects/audiophile',
     stack: [
       'nextjs',
       'typescript',

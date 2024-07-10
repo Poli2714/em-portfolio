@@ -13,7 +13,9 @@ type SkillCategoryProps = {
 function SkillCategory({ categoryName, skills }: SkillCategoryProps) {
   return (
     <div className='flex flex-col gap-y-4'>
-      <h3 className='text-xl font-semibold'>{categoryName}</h3>
+      <h3 className='text-xl font-semibold dark:text-highlight'>
+        {categoryName}
+      </h3>
       <ul className='flex w-full flex-wrap gap-2'>
         {skills.map((skill) => (
           <li key={skill.id}>

@@ -1,10 +1,10 @@
 import { expect, test } from 'vitest';
 import { render, screen } from '@testing-library/react';
 
-import VisitProject from './VisitProject';
+import VisitLink from './VisitLink';
 
-test('renders VisitProject', () => {
-  render(<VisitProject label='Visit Project' route='image-box' />);
+test('renders VisitLink', () => {
+  render(<VisitLink label='Visit Project' route='/projects/image-box' />);
   const link = screen.getByRole('link', { name: 'Visit Project' });
 
   expect(link).toBeInTheDocument();

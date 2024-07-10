@@ -4,7 +4,7 @@ import Link from 'next/link';
 function ContactMeLink() {
   return (
     <Link
-      className='group flex gap-x-2 text-3xl font-semibold'
+      className='group flex gap-x-2 text-3xl font-semibold hover:text-primary'
       href='/contact-me'
     >
       CONTACT ME

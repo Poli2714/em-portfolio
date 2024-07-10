@@ -1,10 +1,14 @@
 import { SectionTitle } from '@/components/ui';
 import { SkillCategory } from './components';
 
-import { coreSkills } from '@/lib/core-skills';
-import { otherTools } from '@/lib/other-tools';
+import { TSkill } from '@/types/skill';
 
-function MySkills() {
+type MySkillsProps = {
+  coreSkills: Array<TSkill>;
+  otherTools: Array<TSkill>;
+};
+
+function MySkills({ coreSkills, otherTools }: MySkillsProps) {
   return (
     <section
       className='my-[clamp(5rem,15dvw,10rem)] space-y-10 lg:mt-0'

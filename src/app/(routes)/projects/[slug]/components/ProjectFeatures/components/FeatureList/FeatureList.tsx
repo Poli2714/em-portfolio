@@ -21,7 +21,9 @@ function FeatureList({ features }: FeatureListProps) {
             size={20}
           />
           <p>
-            <span className='font-bold'>{feature.name}. </span>
+            <span className='font-bold dark:text-highlight'>
+              {feature.name}.{' '}
+            </span>
             {feature.description}
           </p>
         </div>

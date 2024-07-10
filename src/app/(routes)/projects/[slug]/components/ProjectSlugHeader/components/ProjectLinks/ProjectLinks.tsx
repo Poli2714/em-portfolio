@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import { Button } from '@/components/shadcn';
-import { VisitProject } from '@/components/ui';
+import { VisitLink } from '@/components/ui';
 
 import GithubLogoLightMode from '/public/github-mark.svg';
 import GithubLogoDarkMode from '/public/github-mark-white.svg';
@@ -18,7 +18,7 @@ function ProjectLinks({ githubRepo, website }: ProjectLinksProps) {
       className='flex items-center justify-center gap-x-2'
       data-testid='project-links'
     >
-      <VisitProject className='self-center' label='View Live' route={website} />
+      <VisitLink className='self-center' label='View Live' route={website} />
       <Button asChild size='icon' variant='ghost'>
         <Link href={githubRepo}>
           <Image

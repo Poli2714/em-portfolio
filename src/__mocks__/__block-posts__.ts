@@ -11,8 +11,8 @@ export const __blog_posts__: Array<TBlogPost> = [
     images: [
       {
         alt_description: 'Test alt1',
-        dark: 'Test src1',
-        light: 'Test src2',
+        dark_mode: 'Test src1',
+        light_mode: 'Test src2',
       },
     ],
     read_time: 5,
@@ -47,8 +47,8 @@ export const __blog_posts__: Array<TBlogPost> = [
     images: [
       {
         alt_description: 'Test alt2',
-        dark: 'Test src3',
-        light: 'Test src4',
+        dark_mode: 'Test src3',
+        light_mode: 'Test src4',
       },
     ],
     read_time: 5,

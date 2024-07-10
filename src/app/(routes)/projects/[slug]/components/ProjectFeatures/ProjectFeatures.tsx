@@ -18,7 +18,8 @@ function ProjectFeatures({ project }: ProjectFeaturesProps) {
       <ProjectPageSection title='Project Features'>
         <FeatureList features={project.features} />
       </ProjectPageSection>
-      <AspectRatio className='rounded-md shadow-lg' ratio={16 / 9}>
+      <AspectRatio className='relative rounded-md shadow-lg' ratio={16 / 9}>
+        <div className='absolute left-0 top-0 dark:z-10 dark:h-full dark:w-full dark:bg-background/15'></div>
         <Photo
           altDescription={project.images[2].alt_description}
           lightMode={project.images[2].light_mode}

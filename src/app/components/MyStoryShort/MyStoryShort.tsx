@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import { SectionTitle } from '@/components/ui';
+import { SectionTitle, VisitLink } from '@/components/ui';
 
 type MyStoryShortProps = {
   story: string;
@@ -13,12 +13,10 @@ function MyStoryShort({ story }: MyStoryShortProps) {
       data-testid='story-section'
     >
       <SectionTitle title='My Story' />
-      <p className='mx-auto max-w-[70ch] text-lg'>
-        {story}{' '}
-        <Link className='font-semibold' href='/my-story'>
-          My story.
-        </Link>
-      </p>
+      <div className='mx-auto flex max-w-[70ch] flex-col gap-y-6 text-lg'>
+        <p>{story}</p>
+        <VisitLink className='self-start' label='More info' route='/my-story' />
+      </div>
     </section>
   );
 }

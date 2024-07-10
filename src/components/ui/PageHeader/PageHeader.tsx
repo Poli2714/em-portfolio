@@ -1,26 +1,25 @@
 import Link from 'next/link';
 
 import { Button } from '@/components/shadcn';
-import { Logo, NavItems } from '@/components/ui';
+import { Logo, MainNav } from '@/components/ui';
 import { Menu, ModeToggle } from './components';
 
-function PageHeader() {
+import { TNavItem } from '@/types/nav-items';
+
+type PageHeaderProps = {
+  navItems: Array<TNavItem>;
+};
+
+function PageHeader({ navItems }: PageHeaderProps) {
   return (
     <header className='flex h-24 items-center sm:justify-between'>
       <div className='flex items-center gap-x-2'>
-        <Menu />
+        <Menu navItems={navItems} />
         <Logo />
       </div>
-      <div className='hidden md:block'>
-        <NavItems />
-      </div>
+      <MainNav navItems={navItems} />
       <div className='ml-auto flex items-center gap-x-2 sm:ml-0'>
-        <Button
-          asChild
-          className='hidden dark:hover:text-primary-foreground sm:flex'
-          size='lg'
-          variant='outline'
-        >
+        <Button asChild className='hidden sm:flex' size='lg' variant='outline'>
           <Link href='/contact-me'>Contact me</Link>
         </Button>
         <ModeToggle />

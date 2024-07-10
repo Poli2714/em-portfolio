@@ -12,7 +12,7 @@ function ProjectTechStack({ className, stack }: ProjectTechStackProps) {
     <ul className={cn('flex flex-wrap gap-1', className)}>
       {stack.map((tool) => (
         <li key={tool}>
-          <Badge className='bg-primary font-medium text-primary-foreground hover:bg-primary/70'>
+          <Badge className='bg-primary font-medium text-primary-foreground hover:bg-primary/80'>
             {tool}
           </Badge>
         </li>

@@ -1,4 +1,4 @@
-import { ProjectTechStack, VisitProject } from '@/components/ui';
+import { ProjectTechStack, VisitLink } from '@/components/ui';
 
 import { cn } from '@/lib/utils';
 
@@ -19,10 +19,12 @@ function ProjectCardContent({
 }: ProjectCardContentProps) {
   return (
     <div className={cn('grid gap-y-4', className)}>
-      <h4 className='text-2xl font-semibold'>{projectTitle}</h4>
+      <h4 className='text-2xl font-semibold dark:text-highlight'>
+        {projectTitle}
+      </h4>
       <ProjectTechStack stack={techStack} />
       <p className={`mb-2 mt-2 text-lg`}>{shortDescription}</p>
-      <VisitProject
+      <VisitLink
         className='mt-4 place-self-start'
         label='Visit Project'
         route={route}

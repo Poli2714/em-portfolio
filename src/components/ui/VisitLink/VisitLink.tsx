@@ -3,22 +3,20 @@ import Link from 'next/link';
 
 import { cn } from '@/lib/utils';
 
-type VisitProjectProps = {
+type VisitLinkProps = {
   className?: string;
   label: string;
   route: string;
 };
 
-function VisitProject({ className, label, route }: VisitProjectProps) {
-  const href = route.startsWith('https') ? route : `/projects/${route}`;
-
+function VisitLink({ className, label, route }: VisitLinkProps) {
   return (
     <Link
       className={cn(
-        'group flex items-center gap-x-1 font-medium underline underline-offset-8',
+        'group flex items-center gap-x-1 font-medium underline underline-offset-8 hover:text-primary dark:text-highlight dark:hover:text-primary',
         className
       )}
-      href={href}
+      href={route}
     >
       {label}
       <ArrowUpRightIcon
@@ -30,4 +28,4 @@ function VisitProject({ className, label, route }: VisitProjectProps) {
   );
 }
 
-export default VisitProject;
+export default VisitLink;
