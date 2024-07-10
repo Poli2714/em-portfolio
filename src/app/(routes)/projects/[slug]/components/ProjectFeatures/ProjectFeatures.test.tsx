@@ -5,7 +5,7 @@ import ProjectFeatures from './ProjectFeatures';
 import { __projects__ } from '@/__mocks__/__projects__';
 
 vi.mock('@/components/ui', () => ({
-  Photo: () => <div>Mock project Image</div>,
+  PhotoCard: () => <div>Mock photo card</div>,
 }));
 
 vi.mock('..', () => ({

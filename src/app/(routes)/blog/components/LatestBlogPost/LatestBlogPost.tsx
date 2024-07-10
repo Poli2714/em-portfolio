@@ -1,8 +1,8 @@
-import { AspectRatio } from '@/components/shadcn';
-import { BlogPostMetaInfo, Photo } from '@/components/ui';
+import Link from 'next/link';
+
+import { BlogPostMetaInfo, PhotoCard } from '@/components/ui';
 
 import { TBlogPost } from '@/types/blog-post';
-import Link from 'next/link';
 
 type LatestBlogPostProps = {
   blogPost: TBlogPost;
@@ -11,13 +11,7 @@ type LatestBlogPostProps = {
 function LatestBlogPost({ blogPost }: LatestBlogPostProps) {
   return (
     <div className='grid gap-12 lg:grid-cols-2' data-testid='latest-blog-post'>
-      <AspectRatio ratio={5 / 4}>
-        <Photo
-          altDescription={blogPost.images[0].alt_description}
-          lightMode={blogPost.images[0].light_mode}
-          darkMode={blogPost.images[0].dark_mode}
-        />
-      </AspectRatio>
+      <PhotoCard image={blogPost.images[0]} ratio={5 / 4} shade={false} />
       <div className='flex flex-col gap-y-8 lg:justify-center'>
         <div className='space-y-4'>
           <p className='text-sm font-semibold'>{blogPost.category}</p>

@@ -1,6 +1,5 @@
 import { AllPosts } from './components';
-import { AspectRatio } from '@/components/shadcn';
-import { BlogPostMetaInfo, Photo, SocialMediaLinks } from '@/components/ui';
+import { BlogPostMetaInfo, PhotoCard, SocialMediaLinks } from '@/components/ui';
 
 import { TBlogPost } from '@/types/blog-post';
 
@@ -30,13 +29,7 @@ function BlogPostHeader({ blogPost }: BlogPostHeaderProps) {
           <SocialMediaLinks />
         </div>
       </div>
-      <AspectRatio ratio={16 / 9}>
-        <Photo
-          altDescription={blogPost.images[0].alt_description}
-          lightMode={blogPost.images[0].light_mode}
-          darkMode={blogPost.images[0].dark_mode}
-        />
-      </AspectRatio>
+      <PhotoCard image={blogPost.images[0]} shade={false} />
     </>
   );
 }

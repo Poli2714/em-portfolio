@@ -1,5 +1,4 @@
-import { AspectRatio } from '@/components/shadcn';
-import { Photo } from '@/components/ui';
+import { PhotoCard } from '@/components/ui';
 import { ProjectDateAndWebsite } from './components';
 import { ProjectPageSection } from '..';
 
@@ -23,14 +22,7 @@ function ProjectGoal({ project }: ProjectGoalProps) {
         </div>
         <ProjectDateAndWebsite date={project.date} website={project.website} />
       </ProjectPageSection>
-      <AspectRatio className='relative rounded-md shadow-lg' ratio={16 / 9}>
-        <div className='absolute left-0 top-0 dark:z-10 dark:h-full dark:w-full dark:bg-background/15'></div>
-        <Photo
-          altDescription={project.images[1].alt_description}
-          lightMode={project.images[1].light_mode}
-          darkMode={project.images[1].dark_mode}
-        />
-      </AspectRatio>
+      <PhotoCard image={project.images[1]} />
     </div>
   );
 }

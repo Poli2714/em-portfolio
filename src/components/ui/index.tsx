@@ -5,7 +5,7 @@ import MainNav from './MainNav/MainNav';
 import NavItem from './NavItem/NavItem';
 import PageFooter from './PageFooter/PageFooter';
 import PageHeader from './PageHeader/PageHeader';
-import Photo from './Photo/Photo';
+import PhotoCard from './PhotoCard/PhotoCard';
 import ProjectCard from './ProjectCard/ProjectCard';
 import ProjectTechStack from './ProjectTechStack/ProjectTechStack';
 import SectionTitle from './SectionTitle/SectionTitle';
@@ -20,7 +20,7 @@ export {
   NavItem,
   PageFooter,
   PageHeader,
-  Photo,
+  PhotoCard,
   ProjectCard,
   ProjectTechStack,
   SectionTitle,

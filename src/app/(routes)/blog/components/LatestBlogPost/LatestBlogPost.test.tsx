@@ -4,13 +4,9 @@ import { render, screen } from '@testing-library/react';
 import LatestBlogPost from './LatestBlogPost';
 import { __blog_posts__ } from '@/__mocks__/__block-posts__';
 
-vi.mock('@/components/shadcn', () => ({
-  AspectRatio: () => <div>Mock blogpost image</div>,
-}));
-
 vi.mock('@/components/ui', () => ({
   BlogPostMetaInfo: () => <div>Mock meta info</div>,
-  Photo: () => <div>Mock photo</div>,
+  PhotoCard: () => <div>Mock photo card</div>,
 }));
 
 test('renders LatestBlogPost', () => {

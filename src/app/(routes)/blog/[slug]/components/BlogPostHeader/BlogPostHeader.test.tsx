@@ -14,7 +14,7 @@ vi.mock('@/components/shadcn', () => ({
 
 vi.mock('@/components/ui', () => ({
   BlogPostMetaInfo: () => <div>Mock meta info</div>,
-  Photo: () => <div>Mock photo</div>,
+  PhotoCard: () => <div>Mock photo card</div>,
   SocialMediaLinks: () => <div>Mock sm links</div>,
 }));
 

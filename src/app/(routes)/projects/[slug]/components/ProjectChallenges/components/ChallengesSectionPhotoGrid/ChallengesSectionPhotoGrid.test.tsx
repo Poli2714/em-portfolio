@@ -4,12 +4,8 @@ import { render, screen } from '@testing-library/react';
 import ChallengesSectionPhotoGrid from './ChallengesSectionPhotoGrid';
 import { __projects__ } from '@/__mocks__/__projects__';
 
-vi.mock('@/components/shadcn', () => ({
-  AspectRatio: () => <div data-testid='photo'>Mock photo wrap</div>,
-}));
-
 vi.mock('@/components/ui', () => ({
-  Photo: () => <div>Mock photo</div>,
+  PhotoCard: () => <div data-testid='photo-card'>Mock photo card</div>,
 }));
 
 test('renders ChallengesSectionPhotoGrid with 6 photos', () => {
@@ -17,5 +13,5 @@ test('renders ChallengesSectionPhotoGrid with 6 photos', () => {
 
   expect(screen.getByRole('list')).toBeInTheDocument();
   expect(screen.getAllByRole('listitem')).toHaveLength(4);
-  expect(screen.getAllByTestId('photo')).toHaveLength(6);
+  expect(screen.getAllByTestId('photo-card')).toHaveLength(6);
 });

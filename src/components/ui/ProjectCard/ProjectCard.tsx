@@ -1,4 +1,5 @@
-import { ProjectCardContent, ProjectCardHeader } from './components';
+import { PhotoCard } from '..';
+import { ProjectCardContent } from './components';
 
 import { TProject } from '@/types/project';
 
@@ -10,7 +11,7 @@ type ProjectCardProps = {
 function ProjectCard({ className, project }: ProjectCardProps) {
   return (
     <div className='flex w-full flex-col gap-y-6' data-testid='project-card'>
-      <ProjectCardHeader image={project.images[0]} />
+      <PhotoCard image={project.images[0]} />
       <ProjectCardContent
         className={className}
         projectTitle={project.name}
