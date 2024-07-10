@@ -1,5 +1,4 @@
-import { AspectRatio } from '@/components/shadcn';
-import { Photo } from '@/components/ui';
+import { PhotoCard } from '@/components/ui';
 
 import { TBlogPostSection } from '@/types/blog-post';
 
@@ -26,15 +25,7 @@ function BlogPostSection({
           <code>{code}</code>
         </pre>
       ) : null}
-      {!!image ? (
-        <AspectRatio ratio={16 / 9}>
-          <Photo
-            altDescription={image.alt_description}
-            lightMode={image.light_mode}
-            darkMode={image.dark_mode}
-          />
-        </AspectRatio>
-      ) : null}
+      {!!image ? <PhotoCard image={image} shade={false} /> : null}
     </div>
   );
 }
