@@ -24,7 +24,7 @@ export const projects: Array<TProject> = [
       {
         alt_description: 'ImageBox main page for desktop',
         light_mode: '/imageBox/imageBox-lm-1.png',
-        dark_mode: '/imageBox/imageBox-dm-1.png',
+        dark_mode: '/imageBox/imageBox-dm.png',
       },
       {
         alt_description: 'ImageBox search page for desktop',
