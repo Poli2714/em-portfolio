@@ -5,7 +5,9 @@ import ChallengesSectionPhotoGrid from './ChallengesSectionPhotoGrid';
 import { __projects__ } from '@/__mocks__/__projects__';
 
 vi.mock('@/components/ui', () => ({
-  PhotoCard: () => <div data-testid='photo-card'>Mock photo card</div>,
+  FullscreenPhotoCard: () => (
+    <div data-testid='photo-card'>Mock fullscren photo card</div>
+  ),
 }));
 
 test('renders ChallengesSectionPhotoGrid with 6 photos', () => {

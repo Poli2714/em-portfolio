@@ -7,6 +7,7 @@ import {
 import { AspectRatio } from './aspect-ratio';
 import { Badge } from './badge';
 import { Button } from './button';
+import { Dialog, DialogContent, DialogTrigger } from './dialog';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -43,6 +44,9 @@ export {
   AspectRatio,
   Badge,
   Button,
+  Dialog,
+  DialogContent,
+  DialogTrigger,
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,

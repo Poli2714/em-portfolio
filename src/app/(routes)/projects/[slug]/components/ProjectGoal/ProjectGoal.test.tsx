@@ -9,7 +9,7 @@ vi.mock('./components', () => ({
 }));
 
 vi.mock('@/components/ui', () => ({
-  PhotoCard: () => <div>Mock photo card</div>,
+  FullscreenPhotoCard: () => <div>Mock fullscreen photo card</div>,
 }));
 
 vi.mock('..', () => ({

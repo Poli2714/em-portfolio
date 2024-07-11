@@ -1,4 +1,4 @@
-import { PhotoCard, ProjectTechStack } from '@/components/ui';
+import { FullscreenPhotoCard, ProjectTechStack } from '@/components/ui';
 import { ProjectLinks, ProjectNameAndDescription } from './components';
 
 import { TProject } from '@/types/project';
@@ -21,7 +21,7 @@ function ProjectSlugHeader({ project }: ProjectSlugHeaderProps) {
           website={project.website}
         />
       </div>
-      <PhotoCard image={project.images[0]} />
+      <FullscreenPhotoCard image={project.images[0]} />
     </header>
   );
 }

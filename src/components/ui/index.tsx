@@ -1,5 +1,6 @@
 import BlogPostMetaInfo from './BlogPostMetaInfo/BlogPostMetaInfo';
 import ChildPageHeader from './ChildPageHeader/ChildPageHeader';
+import FullscreenPhotoCard from './FullscreenPhotoCard/FullscreenPhotoCard';
 import Logo from './Logo/Logo';
 import MainNav from './MainNav/MainNav';
 import NavItem from './NavItem/NavItem';
@@ -15,6 +16,7 @@ import VisitLink from './VisitLink/VisitLink';
 export {
   BlogPostMetaInfo,
   ChildPageHeader,
+  FullscreenPhotoCard,
   Logo,
   MainNav,
   NavItem,

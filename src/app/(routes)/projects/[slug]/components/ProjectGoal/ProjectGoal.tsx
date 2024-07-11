@@ -1,4 +1,4 @@
-import { PhotoCard } from '@/components/ui';
+import { FullscreenPhotoCard } from '@/components/ui';
 import { ProjectDateAndWebsite } from './components';
 import { ProjectPageSection } from '..';
 
@@ -22,7 +22,7 @@ function ProjectGoal({ project }: ProjectGoalProps) {
         </div>
         <ProjectDateAndWebsite date={project.date} website={project.website} />
       </ProjectPageSection>
-      <PhotoCard image={project.images[1]} />
+      <FullscreenPhotoCard image={project.images[1]} />
     </div>
   );
 }

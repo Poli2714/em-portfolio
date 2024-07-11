@@ -22,7 +22,7 @@ function PhotoCard({
 }: PhotoCardProps) {
   return (
     <AspectRatio
-      className={cn('group relative rounded-md shadow-lg', className)}
+      className={cn('relative rounded-md shadow-lg', className)}
       ratio={ratio ?? 16 / 9}
     >
       {shade ? <Shade shadeColor={shadeColor} /> : null}

@@ -1,5 +1,5 @@
 import { FeatureList } from './components';
-import { PhotoCard } from '@/components/ui';
+import { FullscreenPhotoCard } from '@/components/ui';
 import { ProjectPageSection } from '..';
 
 import { TProject } from '@/types/project';
@@ -17,7 +17,7 @@ function ProjectFeatures({ project }: ProjectFeaturesProps) {
       <ProjectPageSection title='Project Features'>
         <FeatureList features={project.features} />
       </ProjectPageSection>
-      <PhotoCard image={project.images[2]} />
+      <FullscreenPhotoCard image={project.images[2]} />
     </div>
   );
 }

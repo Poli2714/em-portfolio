@@ -9,7 +9,7 @@ vi.mock('@/components/shadcn', () => ({
 }));
 
 vi.mock('@/components/ui', () => ({
-  PhotoCard: () => <div>Mock photo card</div>,
+  FullscreenPhotoCard: () => <div>Mock fullscreen photo card</div>,
   ProjectTechStack: () => <div>Mock tech stack</div>,
 }));
 
