@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 import { PhotoCard } from '..';
 import { ProjectCardContent } from './components';
 
@@ -11,7 +13,12 @@ type ProjectCardProps = {
 function ProjectCard({ className, project }: ProjectCardProps) {
   return (
     <div className='flex w-full flex-col gap-y-6' data-testid='project-card'>
-      <PhotoCard image={project.images[0]} />
+      <Link
+        className='transition-opacity hover:opacity-95 dark:hover:opacity-90'
+        href={project.route}
+      >
+        <PhotoCard image={project.images[0]} />
+      </Link>
       <ProjectCardContent
         className={className}
         projectTitle={project.name}

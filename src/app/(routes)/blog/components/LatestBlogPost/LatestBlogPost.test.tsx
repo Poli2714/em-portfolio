@@ -12,15 +12,20 @@ vi.mock('@/components/ui', () => ({
 test('renders LatestBlogPost', () => {
   render(<LatestBlogPost blogPost={__blog_posts__[0]} />);
   const paragraphs = screen.getAllByRole('paragraph');
-  const link = screen.getByRole('link');
+  const links = screen.getAllByRole('link');
 
   expect(screen.getByTestId('latest-blog-post')).toBeInTheDocument();
+
+  expect(links).toHaveLength(2);
+  links.forEach((link) => {
+    expect(link).toHaveAttribute('href', '/blog/test-slug1');
+  });
+
   expect(paragraphs).toHaveLength(2);
   expect(paragraphs[0]).toHaveTextContent(/^test category1$/i);
+  expect(paragraphs[1]).toHaveTextContent(/^test description1$/i);
+
   expect(
     screen.getByRole('heading', { level: 3, name: /^test title1$/i })
   ).toBeInTheDocument();
-  expect(link).toBeInTheDocument();
-  expect(link).toHaveAttribute('href', '/blog/test-slug1');
-  expect(paragraphs[1]).toHaveTextContent(/^test description1$/i);
 });

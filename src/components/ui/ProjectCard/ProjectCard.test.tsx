@@ -14,6 +14,9 @@ vi.mock('./components', () => ({
 
 test('renders ProjectCard', () => {
   render(<ProjectCard project={__projects__[0]} />);
+  const link = screen.getByRole('link');
 
   expect(screen.getByTestId('project-card')).toBeInTheDocument();
+  expect(link).toBeInTheDocument();
+  expect(link).toHaveAttribute('href', 'test-name1');
 });

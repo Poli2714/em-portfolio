@@ -13,8 +13,8 @@ function MyStoryShort({ story }: MyStoryShortProps) {
       data-testid='story-section'
     >
       <SectionTitle title='My Story' />
-      <div className='mx-auto flex max-w-[70ch] flex-col gap-y-6 text-lg'>
-        <p>{story}</p>
+      <div className='mx-auto flex max-w-[80ch] flex-col gap-y-8'>
+        <p className='text-lg'>{story}</p>
         <VisitLink className='self-start' label='More info' route='/my-story' />
       </div>
     </section>

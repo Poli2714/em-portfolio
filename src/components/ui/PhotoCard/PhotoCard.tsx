@@ -1,19 +1,28 @@
 import { AspectRatio } from '@/components/shadcn';
 import { Photo, Shade } from './components';
 
+import { cn } from '@/lib/utils';
 import { TPhoto } from '@/types/project';
+import Link from 'next/link';
 
 type PhotoCardProps = {
+  className?: string;
   image: TPhoto;
   ratio?: number;
   shade?: boolean;
   shadeColor?: string;
 };
 
-function PhotoCard({ image, ratio, shade = true, shadeColor }: PhotoCardProps) {
+function PhotoCard({
+  className,
+  image,
+  ratio,
+  shade = true,
+  shadeColor,
+}: PhotoCardProps) {
   return (
     <AspectRatio
-      className='relative rounded-md shadow-lg'
+      className={cn('group relative rounded-md shadow-lg', className)}
       ratio={ratio ?? 16 / 9}
     >
       {shade ? <Shade shadeColor={shadeColor} /> : null}
