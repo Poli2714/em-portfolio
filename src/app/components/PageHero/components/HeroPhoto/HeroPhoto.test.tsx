@@ -6,5 +6,5 @@ import HeroPhoto from './HeroPhoto';
 test('renders HeroPhoto', () => {
   render(<HeroPhoto />);
 
-  expect(screen.getByTestId('hero-photo')).toBeInTheDocument();
+  expect(screen.getByRole('img')).toBeInTheDocument();
 });

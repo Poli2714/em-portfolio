@@ -15,7 +15,7 @@ function HeroContent() {
         Frontend Developer
       </h1>
       <p className='text-[clamp(1rem,3dvw,1.5rem)] leading-[clamp(1.5rem,4dvw,2rem)] [&>span]:dark:text-highlight'>
-        I&apos;m a frontend developer based in Canada, skilled in{' '}
+        I&apos;m an aspiring frontend developer based in Canada, skilled in{' '}
         <span className='font-semibold underline decoration-primary decoration-4 underline-offset-[6px]'>
           React
         </span>{' '}

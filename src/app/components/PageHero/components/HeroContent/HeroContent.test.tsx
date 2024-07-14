@@ -12,7 +12,7 @@ test('renders HerContent', () => {
   expect(paragraphs).toHaveLength(2);
   expect(paragraphs[0]).toHaveTextContent(/^hello.*mehdiyev$/i);
   expect(paragraphs[1]).toHaveTextContent(
-    /i'm a frontend developer.*web experiences.$/i
+    /i'm an aspiring frontend developer.*web experiences.$/i
   );
   expect(
     screen.getByRole('heading', { level: 1, name: 'Frontend Developer' })
