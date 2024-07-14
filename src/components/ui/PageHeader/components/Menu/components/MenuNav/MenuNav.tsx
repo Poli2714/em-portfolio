@@ -10,7 +10,7 @@ type MenuNavProps = {
 function MenuNav({ navItems }: MenuNavProps) {
   return (
     <nav>
-      <ul className='flex flex-col gap-y-8 text-3xl uppercase'>
+      <ul className='flex flex-col gap-y-6 text-3xl uppercase'>
         {navItems.map((navItem) => (
           <li key={navItem.id}>
             <SheetClose asChild>

@@ -20,8 +20,13 @@ function LatestBlogPost({ blogPost }: LatestBlogPostProps) {
       <div className='flex flex-col gap-y-8 lg:justify-center'>
         <div className='space-y-4'>
           <p className='text-sm font-semibold'>{blogPost.category}</p>
-          <h3 className='text-[clamp(1.5rem,4.2dvw,2rem)] font-bold leading-[clamp(2rem,5.25dvw,2.5rem)] decoration-from-font transition-all hover:underline hover:underline-offset-4 dark:text-highlight'>
-            <Link href={`/blog/${blogPost.slug}`}>{blogPost.title}</Link>
+          <h3 className='text-[clamp(1.5rem,4.2dvw,2rem)] font-bold leading-[clamp(2rem,5.25dvw,2.5rem)] dark:text-highlight'>
+            <Link
+              className='decoration-from-font transition-all hover:underline hover:underline-offset-4'
+              href={`/blog/${blogPost.slug}`}
+            >
+              {blogPost.title}
+            </Link>
           </h3>
           <p className='text-base md:text-lg'>{blogPost.description}</p>
         </div>
