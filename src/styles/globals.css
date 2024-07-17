@@ -30,6 +30,7 @@
     --destructive-foreground: 60 9.1% 97.8%;
 
     --border: 20 5.9% 90%;
+    --code: 235 17% 25%;
     --input: 20 5.9% 90%;
     --ring: 235 17% 25%;
 
@@ -62,6 +63,7 @@
     --destructive-foreground: 220 20% 70%;
 
     --border: 12 6.5% 15.1%;
+    --code: 235 17% 25%;
     --highlight: 37 80% 98%;
     --input: 220 20% 70%;
     --ring: 220 20% 70%;

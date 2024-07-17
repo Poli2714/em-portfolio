@@ -7,6 +7,10 @@ vi.mock('@/components/ui', () => ({
   PhotoCard: () => <div data-testid='photo-card'>Mock photo card</div>,
 }));
 
+vi.mock('./components', () => ({
+  CodeBlock: () => <div>Mock code block</div>,
+}));
+
 test('renders BlogPostSection with only paragraphs when code, subtitle and image are not provided', () => {
   render(
     <BlogPostSection
@@ -61,7 +65,7 @@ test('renders BlogPostSection with subtitle, paragraph and code when image is no
     screen.getByRole('heading', { level: 3, name: 'Test subtitle' })
   ).toBeInTheDocument();
   expect(screen.getByRole('paragraph')).toHaveTextContent(/^test paragraph$/i);
-  expect(screen.getByRole('code')).toBeInTheDocument();
+  expect(screen.getByText(/^mock code block$/i)).toBeInTheDocument();
   expect(screen.queryByTestId('photo-card')).not.toBeInTheDocument();
 });
 
@@ -82,6 +86,6 @@ test('renders BlogPostSection with subtitle, paragraph, code and image when all 
     screen.getByRole('heading', { level: 3, name: 'Test subtitle' })
   ).toBeInTheDocument();
   expect(screen.getByRole('paragraph')).toHaveTextContent(/^test paragraph$/i);
-  expect(screen.getByRole('code')).toBeInTheDocument();
+  expect(screen.getByText(/^mock code block$/i)).toBeInTheDocument();
   expect(screen.getByTestId('photo-card')).toBeInTheDocument();
 });

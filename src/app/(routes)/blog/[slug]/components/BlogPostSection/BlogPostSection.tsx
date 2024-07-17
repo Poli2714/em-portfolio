@@ -1,3 +1,4 @@
+import { CodeBlock } from './components';
 import { PhotoCard } from '@/components/ui';
 
 import { TBlogPostSection } from '@/types/blog-post';
@@ -20,11 +21,7 @@ function BlogPostSection({
           {paragraph}
         </p>
       ))}
-      {!!code ? (
-        <pre className='overflow-auto rounded-md bg-foreground p-4 text-background dark:bg-highlight'>
-          <code>{code}</code>
-        </pre>
-      ) : null}
+      {!!code ? <CodeBlock code={code} language='tsx' /> : null}
       {!!image ? <PhotoCard image={image} shade={false} /> : null}
     </div>
   );

@@ -28,7 +28,9 @@ export const blog_posts: Array<TBlogPost> = [
         subtitle: 'Approach',
       },
       {
-        code: `'use client';
+        code: `// src/hooks/useMediaQuery.ts
+        
+'use client';
 
 import { useEffect, useState } from 'react';
 
@@ -55,7 +57,21 @@ export function useMediaQuery(query: string) {
         subtitle: '1. Creating the useMediaQuery Hook',
       },
       {
-        code: `function PhotoGrid({ photos, base64results }: PhotoGridProps) {
+        code: `// src/components/ui/PhotoGrid/PhotoGrid.tsx
+
+'use client';
+
+import { PhotoCard } from './components';
+
+import { Photo } from '@/types/Images';
+import { useMediaQuery } from '@/hooks/useMediaQuery';
+
+type PhotoGridProps = {
+  photos: Array<Photo>;
+  base64results: Array<string>;
+};
+        
+function PhotoGrid({ photos, base64results }: PhotoGridProps) {
   const numberOfPhotos = photos.length;
   const isXLarge = useMediaQuery('(min-width: 1448px)');
   const isLarge = useMediaQuery('(min-width: 1096px');
@@ -67,6 +83,7 @@ export function useMediaQuery(query: string) {
     : isLarge ? 'grid-cols-3'
     : isMedium ? 'grid-cols-2'
     : 'grid-cols-1'}\`}>
+      // Columns will go here
       ...
     </ul>
   );
@@ -79,20 +96,22 @@ export default PhotoGrid;`,
         subtitle: '2. Using useMediaQuery to Determine Columns',
       },
       {
-        code: `{Array.from({ length: numberOfCols }).map((_, colIndex) => (
-    <div key={colIndex} className='flex h-auto w-full flex-col gap-y-4'>
-        {photos.map((_, photoIndex) => {
-            const index = colIndex + numberOfCols * photoIndex;
-            return index < numberOfPhotos ? (
-              <li key={photos[index].id}>
-                <PhotoCard
-                  photo={photos[index]}
-                  base64={base64results[index]}
-                />
-              </li>
-            ) : null;
-        })}
-    </div>
+        code: `// src/components/ui/PhotoGrid/PhotoGrid.tsx
+
+{Array.from({ length: numberOfCols }).map((_, colIndex) => (
+  <div key={colIndex} className='flex h-auto w-full flex-col gap-y-4'>
+    {photos.map((_, photoIndex) => {
+      const index = colIndex + numberOfCols * photoIndex;
+      return index < numberOfPhotos ? (
+        <li key={photos[index].id}>
+          <PhotoCard
+            photo={photos[index]}
+            base64={base64results[index]}
+          />
+        </li>
+      ) : null;
+    })}
+  </div>
 ))}`,
         paragraphs: [
           "To maintain the order of photos regardless of the screen width, each column displays every nth photo in the photos array (where n is the number of columns). Here's the implementation:",

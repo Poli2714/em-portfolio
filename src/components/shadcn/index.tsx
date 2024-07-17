@@ -35,6 +35,12 @@ import {
 import { Textarea } from './textarea';
 import { ThemeProvider } from './theme-provider';
 import { Toaster } from './sonner';
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from './tooltip';
 
 export {
   Accordion,
@@ -68,4 +74,8 @@ export {
   Textarea,
   ThemeProvider,
   Toaster,
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
 };
